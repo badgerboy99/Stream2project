@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16">
   <title>Looked after children / England 2013-17</title>
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/bootstrap.min.css')}}">
@@ -9,14 +11,19 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 </head>
+
 <body class="application">
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="./">Looked after children</a>
+        <a class="navbar-brand" href="./">Looked after children / England 2013-17</a>
       </div>
     </div>
   </div>
+  <div>
+      <figure id="image"><img src="img/PhotobyJennEvelyn-AnnonUnsplash.jpg" alt="Children playing together in a supportive way"></figure>
+  </div>
+
   <div  id="outer" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
@@ -34,7 +41,7 @@
           </div>
           <!-- 'First' Chart
 
-
+    <div id="#adopted-2013"></div>
 
       <!-- menu select -->
       <div class="col-sm-6">
@@ -50,10 +57,13 @@
       <!-- menu select -->
 
 
+        </div>
+      </div>
+    </div>
   </div>
   <hr>
   <p class="small text-muted"> Data courtesy of xxxxxxx</p>
-          <p class="small text-muted"> Photo courtesy of xxxxxxx</p>
+          <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>

@@ -37,7 +37,7 @@ def LAC_projects():
     # connection will be closed as soon as we exit the with statement
     with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
         # Define which collection we wish to access
-        collection = conn[LACdata][projects]
+        collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
         # and limit the the results to 55000 -- do I need this on this occasion?
         projects = collection.find(projection=FIELDS, limit=55000)

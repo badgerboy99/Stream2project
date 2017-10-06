@@ -1,3 +1,11 @@
+function print_filter(filter){
+	var f=eval(filter);
+	if (typeof(f.length) != "undefined") {}else{}
+	if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
+	if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
+	console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
+}
+
 queue()
     .defer(d3.json, "/LACdata/projects")
     .await(makeGraphs);
@@ -8,13 +16,6 @@ function makeGraphs(error, LACdataProjects) {
         throw error;
     }
 
-    //Clean donorsUSProjects data
-//    donorsUSProjects.forEach(function (d) {
-  //      d["date_posted"] = dateFormat.parse(d["date_posted"]);
-   //     d["date_posted"].setDate(1);
-   //     d["total_donations"] = +d["total_donations"];
-   // }
-
 
     //Create a Crossfilter instance
     var ndx = crossfilter(LACdataProjects);
@@ -23,76 +24,44 @@ function makeGraphs(error, LACdataProjects) {
     var cDim = ndx.dimension(function (d) {
         return d["c"];
     });
+    var e1Dim = ndx.dimension(function (d) {
+        return d["e1"];
+    });
 
 
+    //set min and max ranges
+    var minRange = e1Dim.bottom(1)[0]["e1"];
+    var maxRange = e1Dim.top(1)[0]["e1"];
+
+    //link chart to DOM element
+    var ad2013lineChart = dc.lineChart("#adopted-2013");
+
+    var selectField = dc.selectMenu('#menu-select');
 
     //Calculate metrics
-    var numProjectsByDate = dateDim.group();
-    var numProjectsByResourceType = resourceTypeDim.group();
-    var numProjectsByPovertyLevel = povertyLevelDim.group();
-    var numProjectsByFundingStatus = fundingStatus.group();
-    var totalDonationsByState = stateDim.group().reduceSum(function (d) {
-        return d["total_donations"];
-    });
-    var stateGroup = stateDim.group();
+    var numAdoptions2013 = cDim.group();
 
 
- //   var all = ndx.groupAll();
- //   var totalDonations = ndx.groupAll().reduceSum(function (d) {
- //       return d["total_donations"];
- //   });
-
-    //Define values (to be used in charts)
-//    var minDate = dateDim.bottom(1)[0]["date_posted"];
- //   var maxDate = dateDim.top(1)[0]["date_posted"];
-
-    //Charts
-    var firstChart = dc.lineChart("#first-chart");
-//    var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
- //   var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
- //   var numberProjectsND = dc.numberDisplay("#number-projects-nd");
- //   var totalDonationsND = dc.numberDisplay("#total-donations-nd");
- //   var fundingStatusChart = dc.pieChart("#funding-chart");
- //   var selectField = dc.selectMenu('#menu-select');
-
+    //chart properties and values
 
     selectField
-        .dimension(stateDim)
-        .group(stateGroup);
+        .dimension(cDim)
+      //  .group(??????)
+    ;
 
-    numberProjectsND
-        .formatNumber(d3.format("d"))
-        .valueAccessor(function (d) {
-            return d;
-        })
-        .group(all);
-
-    totalDonationsND
-        .formatNumber(d3.format("d"))
-        .valueAccessor(function (d) {
-            return d;
-        })
-        .group(totalDonations)
-        .formatNumber(d3.format(".3s"));
-
-  //  -------------------------------------------------------------------
-
-    firstChart
+    ad2013lineChart
         .ordinalColors(["#C96A23"])
         .width(1200)
         .height(300)
         .margins({top: 30, right: 50, bottom: 30, left: 50})
-        .dimension(dateDim)
-        .group(numProjectsByDate)
+        .dimension(cDim)
+        .group(numAdoptions2013)
         .renderArea(true)
         .transitionDuration(500)
-        .x(d3.time.scale().domain([minDate, maxDate]))
+        .x("e1Dim")([minRange, maxRange])
         .elasticY(true)
-        .xAxisLabel("Year")
+        .xAxisLabel("Region")
         .yAxis().ticks(6);
-
-
-
 
     dc.renderAll();
 }
