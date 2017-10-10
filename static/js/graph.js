@@ -1,11 +1,3 @@
-function print_filter(filter){
-	var f=eval(filter);
-	if (typeof(f.length) != "undefined") {}else{}
-	if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
-	if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
-	console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
-}
-
 queue()
     .defer(d3.json, "/LACdata/projects")
     .await(makeGraphs);
@@ -16,6 +8,13 @@ function makeGraphs(error, LACdataProjects) {
         throw error;
     }
 
+function print_filter(filter){
+	var f=eval(filter);
+	if (typeof(f.length) != "undefined") {}else{}
+	if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
+	if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
+	console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
+}
 
     //Create a Crossfilter instance
     var ndx = crossfilter(LACdataProjects);
@@ -28,6 +27,10 @@ function makeGraphs(error, LACdataProjects) {
         return d["e1"];
     });
 
+    //static pie chart
+    var pieCategoryOfNeed {
+        return d["funding_status"];
+    });
 
     //set min and max ranges
     var minRange = e1Dim.bottom(1)[0]["e1"];
