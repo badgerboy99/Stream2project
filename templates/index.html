@@ -4,6 +4,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16">
   <title>Looked after children / England 2013-17</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static',
@@ -12,22 +14,25 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 </head>
 
-<body class="application">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="./">Looked after children / England 2013-17</a>
-      </div>
+<body class="appliction">
+    <div>
+    <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt='Children playing together in a supportive way'>
     </div>
-  </div>
-      <img src="img/PhotobyJennEvelyn-AnnonUnsplash.jpg" alt="Children playing together in a supportive way" width="300"></img>
-  </div>
+    <div class="header">
+        <p id="top">A statistical analysis of</p>
+        <p id="mid">LOOKED-AFTER CHILDREN</p>
+        <p id="bottom">ENGLAND 2013-2017</p>
+    </div>
 
-  <div  id="outer" class="container-fluid">
+
+
+
+
+<!--  <div  id="outer" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
         <div class="row">
-          <!-- Time Chart -->
+           Time Chart
           <div class="col-sm-12">
             <div class="chart-wrapper">
               <div class="chart-title">
@@ -42,27 +47,49 @@
 
     <div id="#adopted-2013"></div>
 
-      <!-- menu select -->
+      <!-- menu select
       <div class="col-sm-6">
         <div class="chart-wrapper">
           <div class="chart-title">
-            Local Authority
+            Local Authority (dropdown)
           </div>
           <div class="chart-stage">
             <div id="menu-select"></div>
           </div>
         </div>
       </div>
-      <!-- menu select -->
+      menu select -->
+    <div class="box">
+        <p class="intro">
+            <strong>Under the <a href="http://www.legislation.gov.uk/ukpga/1989/41/contents">Children Act 1989</a>, a child is legally defined as ‘looked after’ by a local authority if he or she:<br>
+            • gets accommodation from the local authority for a continuous period of more than 24 hours<br>
+            • is subject to a care order (to put the child into the care of the local authority)<br>
+            • is subject to a placement order (to put the child up for adoption)</strong></p><br>
 
-
-        </div>
-      </div>
+        <p class="intro">This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child your local authority looks after at any time during the year and information on adoptions of looked-after children</p>
     </div>
-  </div>
-  <hr>
-  <p class="small text-muted"> Data courtesy of xxxxxxx</p>
-          <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
+
+    <div class="box" id="key-findings">
+       <div class="main-head"> key findings
+       </div>
+        <div class="big-number">
+            <p class="bn-descriptor">Total number of looked-after children (LAC) at 31 March 2017</p>
+        </div>
+        <div>
+            <p class="bn">72,670</p>
+        </div>
+    </div>
+    <div class="box">
+       <div class="main-head"> data dashboard
+       </div>
+    </div>
+
+
+
+  <footer>
+     <p class="small text-muted"> Data courtesy of xxxxxxx</p>
+     <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
+   </footer>
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
