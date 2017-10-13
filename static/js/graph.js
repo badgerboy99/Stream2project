@@ -1,4 +1,4 @@
-queue()
+/*queue()
     .defer(d3.json, "/LACdata/projects")
     .await(makeGraphs);
 
@@ -15,8 +15,25 @@ function print_filter(filter){
 	if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
 	console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
 }
+*/
+// my experimental code to get one graph working
 
-    //Create a Crossfilter instance
+
+/*var ndx = crossfilter(LACdataProjects);
+var e1Dim = ndx.dimension(function (d) {
+        return d["e1"]});
+//var hits = dateDim.group().reduceSum(function(d) {return d.total;});
+
+
+console.log(e1Dim);
+
+*/
+
+
+//dc.renderAll();
+}
+
+/*    //Create a Crossfilter instance
     var ndx = crossfilter(LACdataProjects);
 
     //Define Dimensions
@@ -65,6 +82,4 @@ function print_filter(filter){
         .elasticY(true)
         .xAxisLabel("Region")
         .yAxis().ticks(6);
-
-    dc.renderAll();
-}
+*/

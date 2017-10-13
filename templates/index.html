@@ -6,6 +6,7 @@
   <title>Looked after children / England 2013-17</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static',
@@ -28,37 +29,7 @@
 
 
 
-<!--  <div  id="outer" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="row">
-           Time Chart
-          <div class="col-sm-12">
-            <div class="chart-wrapper">
-              <div class="chart-title">
-                My first chart
-              </div>
-              <div class="chart-stage">
-                <div id="first-chart"></div>
-              </div>
-            </div>
-          </div>
-          <!-- 'First' Chart
 
-    <div id="#adopted-2013"></div>
-
-      <!-- menu select
-      <div class="col-sm-6">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Local Authority (dropdown)
-          </div>
-          <div class="chart-stage">
-            <div id="menu-select"></div>
-          </div>
-        </div>
-      </div>
-      menu select -->
     <div class="box">
         <p class="intro">
             <strong>Under the <a href="http://www.legislation.gov.uk/ukpga/1989/41/contents" target="_blank">Children Act 1989</a>, a child is legally defined as ‘looked after’ by a local authority if he or she:<br>
@@ -76,7 +47,7 @@
             <p class="bn-descriptor">Total number of looked-after children (LAC) at 31 March 2017</p>
         </div>
         <div>
-            <p class="bn">72,670</p>
+            <p class="bn">72,<span>6</span>70</p>
         </div>
     </div>
     <div class="box">
@@ -98,5 +69,10 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+
+    <!--test courtesy(ish) of John Alexis Guerra Gomez -->
+    <script src="{{ url_for ('static', filename='static_pie_ceased_by_reason.csv')}}"></script>
+
 </body>
+</html>
 </html>
