@@ -21,8 +21,8 @@
     </div>
     <div class="header">
         <p id="top">A statistical analysis of</p>
-        <p id="mid">LOOKED-AFTER CHILDREN</p>
-        <p id="bottom">ENGLAND 2013-2017</p>
+        <p id="mid">ADOPTED CHILDREN</p>
+        <p id="bottom">in ENGLAND 2013-2017</p>
     </div>
 
 
@@ -37,10 +37,10 @@
             • is subject to a care order (to put the child into the care of the local authority)<br>
             • is subject to a placement order (to put the child up for adoption)</strong></p><br>
 
-        <p class="intro">This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child your local authority looks after at any time during the year and information on adoptions of looked-after children</p>
+        <p class="intro">This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child your local authority looks after at any time during the year.</p>
     </div>
 
-    <div class="box" id="key-findings">
+<!--    <div class="box" id="key-findings">
        <div class="main-head"> key findings
        </div>
         <div class="big-number">
@@ -49,10 +49,19 @@
         <div>
             <p class="bn">72,<span>6</span>70</p>
         </div>
-    </div>
+    </div> -->
     <div class="box">
        <div class="main-head"> data dashboard
        </div>
+       <!-- First Chart -->
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="firstchart">
+                Graph title ???
+              </div>
+            </div>
+          </div>
+          <!-- First Chart -->
     </div>
 
 
@@ -61,6 +70,7 @@
      <p class="small text-muted"> Data courtesy of xxxxxxx</p>
      <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
    </footer>
+
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
@@ -70,9 +80,6 @@
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
 
-    <!--test courtesy(ish) of John Alexis Guerra Gomez -->
-    <script src="{{ url_for ('static', filename='static_pie_ceased_by_reason.csv')}}"></script>
 
 </body>
-</html>
 </html>

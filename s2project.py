@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
-DBS_NAME = 'LACdata'
+DBS_NAME = 'Adoptdata'
 COLLECTION_NAME = 'projects'
 
 
@@ -19,8 +19,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/LACdata/projects")
-def LAC_projects():
+@app.route("/Adoptdata/projects")
+def Adoptdata():
     """
     A Flask view to serve the project data from
     MongoDB in JSON format.
@@ -29,9 +29,8 @@ def LAC_projects():
     # A constant that defines the record fields that we wish to retrieve.
     FIELDS = {
         '_id': False,
-        'c': True,    'd1' : True,    'e1' : True,   'f1' : True,   'g1' : True, 'h1' : True, 'j2' : True, 'k2' : True, 'l2' : True,  'm2' : True, 'n2' : True, 'q3': True, 'r3'
-        : True, 's3' : True, 't3' : True,  'u3' : True, 'w4' : True, 'x4' : True, 'y4' : True, 'z4' : True, 'aa4' : True, 'ac5' : True, 'ad5' : True, 'ae5' : True, 'af5' : True, 'ag5'
-        : True    }
+        'area': True,    'region' : True,    'year' : True,   'number' : True
+    }
 
     # Open a connection to MongoDB using a with statement such that the
     # connection will be closed as soon as we exit the with statement
