@@ -66,17 +66,67 @@ dc.renderAll();
 */
 var ndx = crossfilter(AdoptdataProjects);
 
-//dimension instance
-var totalDim = ndx.dimension(function(d) { return d.number; });
-/*
-var total_90 = totalDim.filter(90);
+//dimension instances (x-axis)
+var numberDim = ndx.dimension(function(d) {
+    return d.number;
+});
 
-print_filter("total_90");
-*/
+var regionDim  = ndx.dimension(function(d) {
+    return d.region;
+});
 
-var regionDim  = ndx.dimension(function(d) {return d.region;});
+var areaDim  = ndx.dimension(function(d) {
+    return d.area;
+});
 
-var region_filter = regionDim.filter("London");
+var yearDim = ndx.dimension(function(d) {
+    return d.year;
+});
+
+//groups (y-axis)
+var AbyNum = numberDim.group();
+
+var AbyYear = yearDim.group();
+
+var AbyArea = areaDim.group();
+
+var AbyRegion = regionDim.group();
+
+
+//charts
+var pieChart = dc.pieChart('#pie-chart-one');
+
+var rowChart = dc.rowChart('#row-chart-one');
+
+var lineChart = dc.rowChart('#line-chart-one');
+
+
+lineChart
+	.width(1000).height(800)
+	.dimension(numberDim)
+	.group(AbyNum)
+	.x(d3.time.scale());
+
+pieChart
+   .width(290)
+   .height(290)
+   .innerRadius(60)
+   .dimension(numberDim)
+   .group(AbyYear)
+
+rowChart
+    .width(768)
+    .height(480)
+    .x(d3.scale.linear().domain)
+    .elasticX(true)
+    .dimension(yearDim)
+    .group(AbyNum)
+
+dc.renderAll();
+}
+
+
+/*var region_filter = regionDim.filter("London");
 
 print_filter("region_filter");
 
@@ -85,5 +135,5 @@ regionDim.filterAll() // clears filter??
 var total = totalDim.group().reduceSum(function(d) {return d.number;});
 
 print_filter("total");
+*/
 
-}
