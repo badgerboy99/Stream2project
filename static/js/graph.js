@@ -112,7 +112,7 @@ pieChart
    .height(290)
    .innerRadius(60)
    .dimension(numberDim)
-   .group(AbyYear)
+   .group(AbyYear);
 
 rowChart
     .width(768)
@@ -120,7 +120,7 @@ rowChart
     .x(d3.scale.linear().domain)
     .elasticX(true)
     .dimension(yearDim)
-    .group(AbyNum)
+    .group(AbyNum);
 
 dc.renderAll();
 }

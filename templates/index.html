@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<div>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 </head>
 
-<body class="appliction">
+<body>
     <div>
     <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt='Children playing together in a supportive way'>
     </div>
@@ -28,7 +28,7 @@
 
 
 
-
+<div class="container">
 
     <div class="box">
         <p class="intro">
@@ -50,29 +50,42 @@
             <p class="bn">72,<span>6</span>70</p>
         </div>
     </div> -->
-    <div class="box">
-       <div class="main-head"> data dashboard
-       </div>
-       <!-- First Chart
-          <div class="col-sm-12">
-            <div class="chart-wrapper">
-              <div class="firstchart">
-                Graph title ???
+  <div class ="row">
+      <div class="box" class="col-lg-10 col-md-10">
+         <div class="main-head"> data dashboard
+         </div>
+         <!-- First Chart
+            <div class="col-sm-12">
+              <div class="chart-wrapper">
+                <div class="firstchart">
+                  Graph title ???
+                </div>
               </div>
             </div>
-          </div>
-          First Chart -->
-    </div>
-<div id="pie-chart-one"></div>
-<div id="row-chart-one"></div>
-<div id="line-chart-one"></div>
+            First Chart -->
+      </div> 
+       <!--   <div id="pie-chart-one"></div>
+          <div id="row-chart-one"></div>
+          <div id="line-chart-one"></div>  -->
 
+    <!--Twitter streaming-->
+      <div class="col-lg-2 col-md-2">
+        <a class="twitter-timeline"
+            href="https://twitter.com/AdoptionUK?ref_src=twsrc%5Etfw"
+            tweet-limit="4">
+            Tweets by AdoptionUK
+        </a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+         </div>
+  </div> <!--end row-->
 
 
   <footer>
      <p class="small text-muted"> Data courtesy of xxxxxxx</p>
      <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
    </footer>
+
+</div> <!--end container-->
 
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
@@ -82,6 +95,8 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+<!-- twitter streaming -->
+  <script src="{{ url_for ('static', filename='js/twitter.js')}}"></script>
 
 
 </body>
