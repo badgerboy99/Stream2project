@@ -100,6 +100,13 @@ var rowChart = dc.rowChart('#row-chart-one');
 
 var lineChart = dc.rowChart('#line-chart-one');
 
+var selectField = dc.selectMenu('#menu-select');
+
+
+selectField
+        .dimension(regionDim)
+        .group(AbyRegion);
+
 
 lineChart
 	.width(1000).height(800)
