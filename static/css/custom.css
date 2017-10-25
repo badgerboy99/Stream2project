@@ -124,6 +124,25 @@ span {
     border-left: 10px solid #e1c057;
 }
 
+.chart-title {
+    height: 70px;
+}
+
+.chart-title p {
+    color: black;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+#menu-select > select {
+    font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.25px;
+    font-weight: 700;
+}
+
+
 .timeline-Tweet  u-cf js-tweetIdInfo {
     padding: 20px;
 

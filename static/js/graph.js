@@ -100,13 +100,49 @@ var rowChart = dc.rowChart('#row-chart-one');
 
 var lineChart = dc.rowChart('#line-chart-one');
 
-var selectField = dc.selectMenu('#menu-select');
-
+var selectField =   dc.selectMenu('#menu-select');
+var selectField2 =  dc.selectMenu('#menu-select2');
+var selectField3 =  dc.selectMenu('#menu-select3');
+var selectField4 =  dc.selectMenu('#menu-select4');
+var selectField5 =  dc.selectMenu('#menu-select5');
+var selectField6 =  dc.selectMenu('#menu-select6');
+var selectField7 =  dc.selectMenu('#menu-select7');
+var selectField8 =  dc.selectMenu('#menu-select8');
+var selectField9 =  dc.selectMenu('#menu-select9');
+var selectField10 = dc.selectMenu('#menu-select10');
 
 selectField
-        .dimension(regionDim)
-        .group(AbyRegion);
+        .dimension(areaDim)
+        .group(AbyArea);
 
+selectField2
+        .dimension(areaDim)
+        .group(AbyArea);
+
+selectField3
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField4
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField5
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField6
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField7
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField8
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField9
+        .dimension(areaDim)
+        .group(AbyArea);
+selectField10
+        .dimension(areaDim)
+        .group(AbyArea);
 
 lineChart
 	.width(1000).height(800)
