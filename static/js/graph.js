@@ -63,7 +63,9 @@ function print_filter(filter){
 
 dc.renderAll();
 }
-*/
+---------------------------------------------------------------------------
+testing may bring back later
+*/ /*
 var ndx = crossfilter(AdoptdataProjects);
 
 //dimension instances (x-axis)
@@ -164,19 +166,80 @@ rowChart
     .elasticX(true)
     .dimension(yearDim)
     .group(AbyNum);
+--------------------------------------------------------------------------
+---------------------------------------------------------------------------
+  */
+
+
+var ndx = crossfilter(AdoptdataProjects);
+console.log(ndx.size());
+
+var regionDim = ndx.dimension(function(d) {
+    return d.region;
+});
+
+var SW_filter = regionDim.filter("South West");
+
+print_filter("SW_filter");
+
+regionDim.filterAll() //clears
+
+//-------experiment 1 year dim-------------------------------------
+
+var yearDim = ndx.dimension(function(d) {
+    return d.year;
+});
+
+var y2013 = yearDim.group().reduceSum(dc.pluck("number"));
+
+var y2013_filter = yearDim.filter(2013);
+
+// print_filter(y2013_filter);
+
+
+var hope1 = dc.rowChart("#chart-line");
+
+hope1
+    .width(700).height(200)
+    .dimension(yearDim)
+    .group(y2013)
+    .xAxis().ticks(10);
+
+//-------experiment 2 area dim-------------------------------------
+
+var areaDim = ndx.dimension(function(d) {
+    return d.area;
+});
+
+var nbyarea = areaDim.group().reduceSum(dc.pluck("number"));
+
+
+var hope2 = dc.rowChart("#chart-line2");
+
+hope2
+    .width(700).height(2000)
+    .dimension(areaDim)
+    .group(nbyarea)
+    .xAxis().ticks(10);
+
+
+// -------- experiment 3 region dim-----------------------------------------
+
+
+var nbyregion = regionDim.group().reduceSum(dc.pluck("number"));
+
+
+
+var hope3 = dc.rowChart("#chart-line3");
+
+hope3
+    .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
+        "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
+    .width(700).height(400)
+    .dimension(SW_filter)
+    .group(nbyregion)
+    .xAxis().ticks(12);
 
 dc.renderAll();
 }
-
-
-/*var region_filter = regionDim.filter("London");
-
-print_filter("region_filter");
-
-regionDim.filterAll() // clears filter??
-
-var total = totalDim.group().reduceSum(function(d) {return d.number;});
-
-print_filter("total");
-*/
 
