@@ -29,7 +29,7 @@ var SW_filter = regionDim.filter("South West");
 
 //print_filter("SW_filter");
 
-regionDim.filterAll() //clears
+regionDim.filterAll(); //clears
 
 //-------experiment 1 year dim-------------------------------------
 
@@ -39,7 +39,7 @@ var yearDim = ndx.dimension(function(d) {
 
 var y2013 = yearDim.group().reduceSum(dc.pluck("number"));
 
-var y2013_filter = yearDim.filter(2013);
+//var y2013_filter = yearDim.filter(2013);
 
 // print_filter(y2013_filter);
 
@@ -49,7 +49,7 @@ var hope1 = dc.rowChart("#chart-line");
 hope1
     .width(700).height(200)
     .dimension(yearDim)
-    .group(y2013_filter)
+    .group(y2013)
     .xAxis().ticks(10);
 
 //-------experiment 2 area dim-------------------------------------
