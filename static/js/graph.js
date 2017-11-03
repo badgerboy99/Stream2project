@@ -37,20 +37,27 @@ var yearDim = ndx.dimension(function(d) {
     return d.year;
 });
 
-var y2013 = yearDim.group().reduceSum(dc.pluck("number"));
-
-//var y2013_filter = yearDim.filter(2013);
-
-// print_filter(y2013_filter);
 
 
-var hope1 = dc.rowChart("#chart-line");
+var nbyYear = yearDim.group().reduceSum(dc.pluck("number"));
+
+var hope1 = dc.barChart("#chart-line");
+
+var numberDim = ndx.dimension(function(d) {
+    return d.number;
+});
+
+var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
 
 hope1
     .width(700).height(200)
-    .dimension(yearDim)
-    .group(y2013)
-    .xAxis().ticks(10);
+    //.dimension(yearDim)
+    //.group(nbyYear)
+    .dimension(regionDim)
+    .group(nbyYear)
+    .x(d3.scale.linear().domain([0,5000]))
+    .xAxis().ticks(10)
+    ;
 
 //-------experiment 2 area dim-------------------------------------
 
@@ -58,7 +65,7 @@ var areaDim = ndx.dimension(function(d) {
     return d.area;
 });
 
-var nbyarea = areaDim.group().reduceSum(dc.pluck("number"));
+var nbyArea = areaDim.group().reduceSum(dc.pluck("number"));
 
 
 var hope2 = dc.rowChart("#chart-line2");
@@ -67,27 +74,28 @@ hope2
     .width(700)
     .height(2000)
     .dimension(areaDim)
-    .group(nbyarea)
+    .group(nbyArea)
     .xAxis().ticks(10);
 
 
 // -------- experiment 3 region dim-----------------------------------------
 
 
-var nbyregion = regionDim.group().reduceSum(dc.pluck("number"));
+var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
 
 
 
 var hope3 = dc.rowChart("#chart-line3");
 
 hope3
-    .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
+    .ordinalColors(["#77d741", "#36b237", "#FFAB38", "#58d3c4",
         "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
     .width(700)
     .height(400)
     .dimension(SW_filter)
-    .group(nbyregion)
-    .xAxis().ticks(12);
+    .group(nbyRegion)
+    .elasticX(true)
+    .xAxis().ticks(20);
 
 // -------- experiment 4  --- bar by year/region -----------------------------------------
 /*
@@ -117,7 +125,7 @@ hope5
     .height(400)
     .innerRadius(80)
     .dimension(SW_filter)
-    .group(nbyregion);
+    .group(nbyRegion);
 
 dc.renderAll();
 }

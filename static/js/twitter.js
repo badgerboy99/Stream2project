@@ -1,7 +1,7 @@
 twttr.widgets.createTimeline(
   {
     sourceType: "profile",
-    screenName: "twitterdev"
+    scrnName: "twitterdev"
   },
   document.getElementById("container"),
   {
@@ -9,6 +9,6 @@ twttr.widgets.createTimeline(
     chrome: "nofooter",
     linkColor: "#820bbb",
     borderColor: "#a80000"
-    tweetlimit: 2
+    twtlimit: 2
   }
 );

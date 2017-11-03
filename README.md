@@ -7,4 +7,4 @@ This is my data dashboard project.
 An interactive dashboard enabling users to filter data by region, year and subject
 
 ## Tech Used
-Flask. MongoDB. Bootstrap. D3.js. DC.js. Crossfilter. Queue.js. Keen.js
+Flask. MongoDB. Bootstrap. D3.js. DC.js. Crossfilter. Queue.js. Kn.js
