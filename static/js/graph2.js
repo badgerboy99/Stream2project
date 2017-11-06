@@ -39,7 +39,7 @@ Gateshead	North East	2017	380
 
 var ndx = crossfilter(AdoptdataProjects);
 //console.log(ndx.size());
-var all = ndx.groupAll();   //Nakita - is this needed? Why?
+//var all = ndx.groupAll();
 
 //---dimensions -------------------------------------------
 
@@ -61,28 +61,28 @@ var numberDim = ndx.dimension(function(d) {
 var nbyArea = areaDim.group();
 var nbyRegion = regionDim.group();
 var nbyYear = yearDim.group();
-var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));   //Nakita – as I have four column headings, I've done a dim and a group for each. Is that correct?
+var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
 
 //---linking to the DOM  -------------------------------------------
 
 var chart1 = dc.rowChart("#chart-line"); //change id name later
-var chart2 = dc.rowChart("#chart-line2"); //change id name later
+var chart2 = dc.barChart("#chart-line2"); //change id name later
 
 
 //---graphs  -------------------------------------------
 
 chart1
     .width(700).height(600)
-    .dimension(areaDim)
+    .dimension(regionDim)
     .group(nbyNumber)
     .xAxis().ticks(10)
     ;
 
 chart2
     .width(700).height(400)
-    .dimension(numberDim)
-    .group(nbyYear)
-    .x(d3.scale.linear().domain([0,3000]))
+    .dimension(yearDim)
+    .group(nbyNumber)
+    .x(d3.scale.linear().domain([0,1400]))
     .xAxis().ticks(10)
     ;
 
