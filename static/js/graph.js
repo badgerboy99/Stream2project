@@ -108,7 +108,7 @@ hope4
     .height(400)
     .dimension(yearDim)
     .brushOn(false)
-    .group(nbyarea)
+    .group(nbyArea)
     .x(d3.scale.linear().domain([0,20000]));
 
 */
@@ -124,7 +124,7 @@ hope5
     .width(400)
     .height(400)
     .innerRadius(80)
-    .dimension(SW_filter)
+    .dimension(numberDim)
     .group(nbyRegion);
 
 dc.renderAll();
