@@ -53,6 +53,8 @@ var regionDim = ndx.dimension(function(d) {
 var yearDim = ndx.dimension(function(d) {
     return d.year;
 });
+
+
 var numberDim = ndx.dimension(function(d) {
     return d.number;
 });
@@ -62,54 +64,75 @@ var numberDim = ndx.dimension(function(d) {
 var nbyArea = areaDim.group();
 var nbyRegion = regionDim.group();
 var nbyYear = yearDim.group();
-var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
-var nbyNumber2 = numberDim.group();
+//var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
+//var nbyNumber2 = numberDim.group();
+var nbyNumber = regionDim.group().reduceSum(dc.pluck("number")); //with help from crina (but not right?)
 
 //---linking to the DOM  -------------------------------------------
 
 var chart1 = dc.barChart("#chart-bar");
-var chart2 = dc.rowChart("#chart-line2"); //change id name later
-var chart3 = dc.pieChart("#chart-pie"); //change id name later
+//var chart2 = dc.rowChart("#chart-line2"); //change id name later
+//var chart3 = dc.pieChart("#chart-pie"); //change id name later
 
 
 //---graphs  -------------------------------------------
 
+    var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
+
 chart1
-    /*.width(700).height(100)
+    .width(300)
+    .height(300)
+    .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
+        "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
+    .margins({top: 10, right: 50, bottom: 40, left: 60})
+    .brushOn(false)
     .dimension(regionDim)
     .group(nbyNumber)
-    .xAxis().ticks(10)
-    ;*/
-    .width(700).height(300)
-    .dimension(regionDim)
-    .group(nbyNumber)
-    .x(d3.scale.linear()
-    .domain([0, 2000]))
+    .x(d3.scale.ordinal().domain(regions))
+	.xUnits(dc.units.ordinal)
+    .elasticY(true)
+    .xAxisLabel("Region")
+    .yAxisLabel("Total adoptions")
     ;
-/*chart2
-        .width(600)
-        .height(300)
-        .dimension(numberDim)
-        .group(nbyYear)
-        .x(d3.scale.linear().domain([0,2000]))
-        ;
 
-    /*.width(700).height(400)
+
+
+var chart2 = dc.pieChart("#chart-pie");
+
+chart2
+    .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
+        "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
+    .width(300)
+    .height(400)
+    .innerRadius(60)
     .dimension(yearDim)
-    .group(nbyYear)
-    .x(d3.scale.linear().domain([0,1400]))
-    .xAxis().ticks(10)
-    ;*/
+    .group(nbyNumber)
+    ;
 
-/*
+var chart3 = dc.rowChart("#chart-row");
+
 chart3
     .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
         "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
-    .width(400)
+    .width(300)
     .height(400)
-    .innerRadius(80)
+    .dimension(areaDim)
+    .group(nbyRegion)
+    .renderTitle(true)
+    .xAxis().ticks(4)
+    ;
+
+var chart4 = dc.lineChart("#chart-line");
+
+chart4
+    .width(500)
+    .height(200)
     .dimension(numberDim)
-    .group(nbyRegion);
-*/
+    .group(nbyYear)
+    .brushOn(true)
+    .x(d3.scale.ordinal())
+    .xAxis().ticks(4)
+    ;
+
 dc.renderAll();
 }
