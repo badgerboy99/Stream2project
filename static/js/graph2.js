@@ -97,9 +97,9 @@ chart1
 
 
 
-var chart2 = dc.pieChart("#chart-pie");
+var piechart = dc.pieChart("#chart-pie");
 
-chart2
+piechart
     .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
         "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
     .width(300)
@@ -109,22 +109,22 @@ chart2
     .group(nbyNumber)
     ;
 
-var chart3 = dc.rowChart("#chart-row");
+var rowchart = dc.rowChart("#chart-row");
 
-chart3
+rowchart
     .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
         "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
     .width(300)
     .height(400)
-    .dimension(areaDim)
+    .dimension(numberDim)
     .group(nbyRegion)
     .renderTitle(true)
     .xAxis().ticks(4)
     ;
 
-var chart4 = dc.lineChart("#chart-line");
+var linechart = dc.lineChart("#chart-line");
 
-chart4
+linechart
     .width(500)
     .height(200)
     .dimension(numberDim)
