@@ -58,15 +58,17 @@ function makeGraphs(error, AdoptdataProjects) {
         return d.number;
     });
 
+    var all = ndx.groupAll();
 
     //---groups  -------------------------------------------
 
-    var nbyArea = areaDim.group();
+    var nbyArea = areaDim.group().reduceSum(function(d) {return d.number;});
     var nbyRegion = regionDim.group();
-    var nbyYear = yearDim.group();
+    //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
     //var nbyNumber2 = numberDim.group();
     //var nbyNumber = regionDim.group().reduceSum(dc.pluck("number")); //with help from crina (but not right?)
+    var nbyYear = yearDim.group().reduceSum(dc.pluck("number"));
 
     //---linking to the DOM  -------------------------------------------
 
@@ -74,10 +76,12 @@ function makeGraphs(error, AdoptdataProjects) {
     //var chart2 = dc.rowChart("#chart-line2"); //change id name later
     //var chart3 = dc.pieChart("#chart-pie"); //change id name later
 
+    var totalAdoptionsND = dc.numberDisplay("#total-adoptions-nd");
+
 
     //---graphs  -------------------------------------------
 
-        var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
+        //var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
     barchart
         .width(300)
@@ -86,10 +90,11 @@ function makeGraphs(error, AdoptdataProjects) {
             "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
         .margins({top: 10, right: 50, bottom: 40, left: 60})
         .brushOn(false)
-        .dimension(regionDim)
+        .dimension(yearDim)
         .group(nbyYear)
-        .x(d3.scale.ordinal().domain(regions))
-        .xUnits(dc.units.ordinal)
+        //.x(d3.scale.ordinal()).//domain(regions))
+        .x(d3.scale.linear())
+        //.xUnits(dc.units.ordinal())
         .elasticY(true)
         .xAxisLabel("Region")
         .yAxisLabel("Total adoptions")
@@ -97,7 +102,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
 
 
-    var piechart = dc.pieChart("#chart-pie");
+ /*   var piechart = dc.pieChart("#chart-pie");
 
     piechart
         .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
@@ -108,8 +113,22 @@ function makeGraphs(error, AdoptdataProjects) {
         .dimension(yearDim)
         .group(nbyYear)
         ;
+*/
+    var rowchart2 = dc.rowChart("#chart-row2");
 
-    var rowchart = dc.rowChart("#chart-row");
+    rowchart2
+        .ordinalColors(["#e1c057"])
+        .width(300)
+        .height(400)
+        .dimension(yearDim)
+        .group(nbyYear)
+        .renderTitle(true)
+        .xAxis().ticks(4)
+        ;
+
+
+
+   var rowchart = dc.rowChart("#chart-row");
 
     rowchart
         .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
@@ -127,12 +146,17 @@ function makeGraphs(error, AdoptdataProjects) {
     linechart
         .width(500)
         .height(200)
-        .dimension(numberDim)
-        .group(nbyYear)
-        .brushOn(true)
+        .dimension(regionDim)
+        .group(nbyNumber)
+        .brushOn(false)
         .x(d3.scale.ordinal())
-        .xAxis().ticks(4)
+        .xAxis().ticks(60)
         ;
+
+    totalAdoptionsND
+        .valueAccessor(function (d) { return d })   // yearDim.group().reduceSum(function(d) {return d.number;});
+        .group(all)
+        .formatNumber(d3.format(","));
 
 dc.renderAll();
 }
