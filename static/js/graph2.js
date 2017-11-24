@@ -146,7 +146,7 @@ function makeGraphs(error, AdoptdataProjects) {
     linechart
         .width(500)
         .height(200)
-        .dimension(regionDim)
+        .dimension(yearDim)
         .group(nbyNumber)
         .brushOn(false)
         .x(d3.scale.ordinal())
