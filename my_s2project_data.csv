@@ -1,0 +1,761 @@
+area,region,year,number
+Darlington,North East,2013,210
+Darlington,North East,2014,190
+Darlington,North East,2015,200
+Darlington,North East,2016,205
+Darlington,North East,2017,220
+Durham,North East,2013,630
+Durham,North East,2014,605
+Durham,North East,2015,615
+Durham,North East,2016,675
+Durham,North East,2017,815
+Gateshead,North East,2013,390
+Gateshead,North East,2014,355
+Gateshead,North East,2015,335
+Gateshead,North East,2016,345
+Gateshead,North East,2017,380
+Hartlepool,North East,2013,185
+Hartlepool,North East,2014,200
+Hartlepool,North East,2015,165
+Hartlepool,North East,2016,205
+Hartlepool,North East,2017,255
+Middlesbrough,North East,2013,360
+Middlesbrough,North East,2014,350
+Middlesbrough,North East,2015,360
+Middlesbrough,North East,2016,375
+Middlesbrough,North East,2017,440
+Newcastle Upon Tyne,North East,2013,550
+Newcastle Upon Tyne,North East,2014,555
+Newcastle Upon Tyne,North East,2015,505
+Newcastle Upon Tyne,North East,2016,500
+Newcastle Upon Tyne,North East,2017,535
+North Tyneside,North East,2013,295
+North Tyneside,North East,2014,305
+North Tyneside,North East,2015,300
+North Tyneside,North East,2016,290
+North Tyneside,North East,2017,295
+Northumberland,North East,2013,315
+Northumberland,North East,2014,330
+Northumberland,North East,2015,365
+Northumberland,North East,2016,385
+Northumberland,North East,2017,405
+Redcar and Cleveland,North East,2013,175
+Redcar and Cleveland,North East,2014,175
+Redcar and Cleveland,North East,2015,185
+Redcar and Cleveland,North East,2016,200
+Redcar and Cleveland,North East,2017,235
+South Tyneside,North East,2013,320
+South Tyneside,North East,2014,305
+South Tyneside,North East,2015,295
+South Tyneside,North East,2016,290
+South Tyneside,North East,2017,275
+Stockton-On-Tees,North East,2013,360
+Stockton-On-Tees,North East,2014,380
+Stockton-On-Tees,North East,2015,375
+Stockton-On-Tees,North East,2016,375
+Stockton-On-Tees,North East,2017,435
+Sunderland,North East,2013,435
+Sunderland,North East,2014,490
+Sunderland,North East,2015,570
+Sunderland,North East,2016,545
+Sunderland,North East,2017,540
+Blackburn with Darwen,North West,2013,345
+Blackburn with Darwen,North West,2014,340
+Blackburn with Darwen,North West,2015,315
+Blackburn with Darwen,North West,2016,345
+Blackburn with Darwen,North West,2017,370
+Blackpool,North West,2013,480
+Blackpool,North West,2014,445
+Blackpool,North West,2015,455
+Blackpool,North West,2016,470
+Blackpool,North West,2017,525
+Bolton,North West,2013,540
+Bolton,North West,2014,530
+Bolton,North West,2015,570
+Bolton,North West,2016,560
+Bolton,North West,2017,580
+Bury,North West,2013,320
+Bury,North West,2014,310
+Bury,North West,2015,295
+Bury,North West,2016,305
+Bury,North West,2017,350
+Cheshire East,North West,2013,375
+Cheshire East,North West,2014,335
+Cheshire East,North West,2015,360
+Cheshire East,North West,2016,390
+Cheshire East,North West,2017,430
+Cheshire West and Chester,North West,2013,385
+Cheshire West and Chester,North West,2014,435
+Cheshire West and Chester,North West,2015,495
+Cheshire West and Chester,North West,2016,460
+Cheshire West and Chester,North West,2017,485
+Cumbria,North West,2013,630
+Cumbria,North West,2014,665
+Cumbria,North West,2015,685
+Cumbria,North West,2016,660
+Cumbria,North West,2017,625
+Halton,North West,2013,145
+Halton,North West,2014,210
+Halton,North West,2015,230
+Halton,North West,2016,240
+Halton,North West,2017,265
+Knowsley,North West,2013,235
+Knowsley,North West,2014,260
+Knowsley,North West,2015,305
+Knowsley,North West,2016,290
+Knowsley,North West,2017,290
+Lancashire,North West,2013,1475
+Lancashire,North West,2014,1585
+Lancashire,North West,2015,1590
+Lancashire,North West,2016,1660
+Lancashire,North West,2017,1850
+Liverpool,North West,2013,945
+Liverpool,North West,2014,990
+Liverpool,North West,2015,990
+Liverpool,North West,2016,1040
+Liverpool,North West,2017,1120
+Manchester,North West,2013,1300
+Manchester,North West,2014,1380
+Manchester,North West,2015,1310
+Manchester,North West,2016,1250
+Manchester,North West,2017,1165
+Oldham,North West,2013,345
+Oldham,North West,2014,395
+Oldham,North West,2015,390
+Oldham,North West,2016,420
+Oldham,North West,2017,495
+Rochdale,North West,2013,505
+Rochdale,North West,2014,530
+Rochdale,North West,2015,525
+Rochdale,North West,2016,480
+Rochdale,North West,2017,460
+Salford,North West,2013,540
+Salford,North West,2014,575
+Salford,North West,2015,585
+Salford,North West,2016,555
+Salford,North West,2017,520
+Sefton,North West,2013,425
+Sefton,North West,2014,400
+Sefton,North West,2015,450
+Sefton,North West,2016,465
+Sefton,North West,2017,455
+St Helens,North West,2013,440
+St Helens,North West,2014,430
+St Helens,North West,2015,410
+St Helens,North West,2016,410
+St Helens,North West,2017,425
+Stockport,North West,2013,305
+Stockport,North West,2014,300
+Stockport,North West,2015,290
+Stockport,North West,2016,295
+Stockport,North West,2017,330
+Tameside,North West,2013,385
+Tameside,North West,2014,425
+Tameside,North West,2015,415
+Tameside,North West,2016,430
+Tameside,North West,2017,515
+Trafford,North West,2013,290
+Trafford,North West,2014,315
+Trafford,North West,2015,335
+Trafford,North West,2016,330
+Trafford,North West,2017,385
+Warrington,North West,2013,230
+Warrington,North West,2014,235
+Warrington,North West,2015,300
+Warrington,North West,2016,345
+Warrington,North West,2017,380
+Wigan,North West,2013,510
+Wigan,North West,2014,495
+Wigan,North West,2015,505
+Wigan,North West,2016,485
+Wigan,North West,2017,445
+Wirral,North West,2013,665
+Wirral,North West,2014,665
+Wirral,North West,2015,670
+Wirral,North West,2016,665
+Wirral,North West,2017,765
+Barnsley,Yorkshire and The Humber,2013,235
+Barnsley,Yorkshire and The Humber,2014,225
+Barnsley,Yorkshire and The Humber,2015,240
+Barnsley,Yorkshire and The Humber,2016,280
+Barnsley,Yorkshire and The Humber,2017,290
+Bradford,Yorkshire and The Humber,2013,875
+Bradford,Yorkshire and The Humber,2014,880
+Bradford,Yorkshire and The Humber,2015,880
+Bradford,Yorkshire and The Humber,2016,845
+Bradford,Yorkshire and The Humber,2017,925
+Calderdale,Yorkshire and The Humber,2013,335
+Calderdale,Yorkshire and The Humber,2014,320
+Calderdale,Yorkshire and The Humber,2015,320
+Calderdale,Yorkshire and The Humber,2016,300
+Calderdale,Yorkshire and The Humber,2017,315
+Doncaster,Yorkshire and The Humber,2013,500
+Doncaster,Yorkshire and The Humber,2014,500
+Doncaster,Yorkshire and The Humber,2015,480
+Doncaster,Yorkshire and The Humber,2016,485
+Doncaster,Yorkshire and The Humber,2017,510
+East Riding of Yorkshire,Yorkshire and The Humber,2013,335
+East Riding of Yorkshire,Yorkshire and The Humber,2014,310
+East Riding of Yorkshire,Yorkshire and The Humber,2015,290
+East Riding of Yorkshire,Yorkshire and The Humber,2016,260
+East Riding of Yorkshire,Yorkshire and The Humber,2017,285
+"Kingston Upon Hull,Yorkshire and The Humber, City of",Yorkshire and The Humber,2013,650
+"Kingston Upon Hull,Yorkshire and The Humber, City of",Yorkshire and The Humber,2014,640
+"Kingston Upon Hull,Yorkshire and The Humber, City of",Yorkshire and The Humber,2015,660
+"Kingston Upon Hull,Yorkshire and The Humber, City of",Yorkshire and The Humber,2016,645
+"Kingston Upon Hull,Yorkshire and The Humber, City of",Yorkshire and The Humber,2017,695
+Kirklees,Yorkshire and The Humber,2013,650
+Kirklees,Yorkshire and The Humber,2014,610
+Kirklees,Yorkshire and The Humber,2015,620
+Kirklees,Yorkshire and The Humber,2016,655
+Kirklees,Yorkshire and The Humber,2017,700
+Leeds,Yorkshire and The Humber,2013,1375
+Leeds,Yorkshire and The Humber,2014,1355
+Leeds,Yorkshire and The Humber,2015,1255
+Leeds,Yorkshire and The Humber,2016,1240
+Leeds,Yorkshire and The Humber,2017,1255
+North East Lincolnshire,Yorkshire and The Humber,2013,200
+North East Lincolnshire,Yorkshire and The Humber,2014,265
+North East Lincolnshire,Yorkshire and The Humber,2015,265
+North East Lincolnshire,Yorkshire and The Humber,2016,295
+North East Lincolnshire,Yorkshire and The Humber,2017,295
+North Lincolnshire,Yorkshire and The Humber,2013,165
+North Lincolnshire,Yorkshire and The Humber,2014,170
+North Lincolnshire,Yorkshire and The Humber,2015,175
+North Lincolnshire,Yorkshire and The Humber,2016,200
+North Lincolnshire,Yorkshire and The Humber,2017,225
+North Yorkshire,Yorkshire and The Humber,2013,490
+North Yorkshire,Yorkshire and The Humber,2014,460
+North Yorkshire,Yorkshire and The Humber,2015,445
+North Yorkshire,Yorkshire and The Humber,2016,410
+North Yorkshire,Yorkshire and The Humber,2017,425
+Rotherham,Yorkshire and The Humber,2013,390
+Rotherham,Yorkshire and The Humber,2014,395
+Rotherham,Yorkshire and The Humber,2015,405
+Rotherham,Yorkshire and The Humber,2016,430
+Rotherham,Yorkshire and The Humber,2017,485
+Sheffield,Yorkshire and The Humber,2013,540
+Sheffield,Yorkshire and The Humber,2014,535
+Sheffield,Yorkshire and The Humber,2015,530
+Sheffield,Yorkshire and The Humber,2016,530
+Sheffield,Yorkshire and The Humber,2017,585
+Wakefield,Yorkshire and The Humber,2013,440
+Wakefield,Yorkshire and The Humber,2014,490
+Wakefield,Yorkshire and The Humber,2015,495
+Wakefield,Yorkshire and The Humber,2016,480
+Wakefield,Yorkshire and The Humber,2017,520
+York,Yorkshire and The Humber,2013,245
+York,Yorkshire and The Humber,2014,220
+York,Yorkshire and The Humber,2015,190
+York,Yorkshire and The Humber,2016,190
+York,Yorkshire and The Humber,2017,205
+Derby,East Midlands,2013,465
+Derby,East Midlands,2014,445
+Derby,East Midlands,2015,470
+Derby,East Midlands,2016,450
+Derby,East Midlands,2017,450
+Derbyshire,East Midlands,2013,665
+Derbyshire,East Midlands,2014,625
+Derbyshire,East Midlands,2015,610
+Derbyshire,East Midlands,2016,585
+Derbyshire,East Midlands,2017,630
+Leicester,East Midlands,2013,520
+Leicester,East Midlands,2014,530
+Leicester,East Midlands,2015,565
+Leicester,East Midlands,2016,645
+Leicester,East Midlands,2017,695
+Leicestershire,East Midlands,2013,435
+Leicestershire,East Midlands,2014,455
+Leicestershire,East Midlands,2015,470
+Leicestershire,East Midlands,2016,470
+Leicestershire,East Midlands,2017,510
+Lincolnshire,East Midlands,2013,590
+Lincolnshire,East Midlands,2014,600
+Lincolnshire,East Midlands,2015,630
+Lincolnshire,East Midlands,2016,625
+Lincolnshire,East Midlands,2017,690
+Northamptonshire,East Midlands,2013,735
+Northamptonshire,East Midlands,2014,855
+Northamptonshire,East Midlands,2015,940
+Northamptonshire,East Midlands,2016,995
+Northamptonshire,East Midlands,2017,1005
+Nottingham,East Midlands,2013,565
+Nottingham,East Midlands,2014,585
+Nottingham,East Midlands,2015,580
+Nottingham,East Midlands,2016,595
+Nottingham,East Midlands,2017,615
+Nottinghamshire,East Midlands,2013,880
+Nottinghamshire,East Midlands,2014,825
+Nottinghamshire,East Midlands,2015,840
+Nottinghamshire,East Midlands,2016,815
+Nottinghamshire,East Midlands,2017,775
+Rutland,East Midlands,2013,30
+Rutland,East Midlands,2014,35
+Rutland,East Midlands,2015,35
+Rutland,East Midlands,2016,40
+Rutland,East Midlands,2017,40
+Birmingham,West Midlands,2013,1890
+Birmingham,West Midlands,2014,1805
+Birmingham,West Midlands,2015,1985
+Birmingham,West Midlands,2016,1815
+Birmingham,West Midlands,2017,1840
+Coventry,West Midlands,2013,620
+Coventry,West Midlands,2014,630
+Coventry,West Midlands,2015,590
+Coventry,West Midlands,2016,580
+Coventry,West Midlands,2017,620
+Dudley,West Midlands,2013,730
+Dudley,West Midlands,2014,755
+Dudley,West Midlands,2015,740
+Dudley,West Midlands,2016,725
+Dudley,West Midlands,2017,675
+Herefordshire,West Midlands,2013,215
+Herefordshire,West Midlands,2014,240
+Herefordshire,West Midlands,2015,270
+Herefordshire,West Midlands,2016,285
+Herefordshire,West Midlands,2017,300
+Sandwell,West Midlands,2013,600
+Sandwell,West Midlands,2014,570
+Sandwell,West Midlands,2015,540
+Sandwell,West Midlands,2016,530
+Sandwell,West Midlands,2017,610
+Shropshire,West Midlands,2013,240
+Shropshire,West Midlands,2014,270
+Shropshire,West Midlands,2015,310
+Shropshire,West Midlands,2016,285
+Shropshire,West Midlands,2017,290
+Solihull,West Midlands,2013,325
+Solihull,West Midlands,2014,325
+Solihull,West Midlands,2015,335
+Solihull,West Midlands,2016,360
+Solihull,West Midlands,2017,385
+Staffordshire,West Midlands,2013,945
+Staffordshire,West Midlands,2014,950
+Staffordshire,West Midlands,2015,930
+Staffordshire,West Midlands,2016,980
+Staffordshire,West Midlands,2017,995
+Stoke-On-Trent,West Midlands,2013,480
+Stoke-On-Trent,West Midlands,2014,535
+Stoke-On-Trent,West Midlands,2015,610
+Stoke-On-Trent,West Midlands,2016,655
+Stoke-On-Trent,West Midlands,2017,655
+Telford and Wrekin,West Midlands,2013,320
+Telford and Wrekin,West Midlands,2014,310
+Telford and Wrekin,West Midlands,2015,295
+Telford and Wrekin,West Midlands,2016,300
+Telford and Wrekin,West Midlands,2017,380
+Walsall,West Midlands,2013,575
+Walsall,West Midlands,2014,630
+Walsall,West Midlands,2015,605
+Walsall,West Midlands,2016,625
+Walsall,West Midlands,2017,650
+Warwickshire,West Midlands,2013,700
+Warwickshire,West Midlands,2014,695
+Warwickshire,West Midlands,2015,690
+Warwickshire,West Midlands,2016,760
+Warwickshire,West Midlands,2017,700
+Wolverhampton,West Midlands,2013,655
+Wolverhampton,West Midlands,2014,770
+Wolverhampton,West Midlands,2015,780
+Wolverhampton,West Midlands,2016,655
+Wolverhampton,West Midlands,2017,640
+Worcestershire,West Midlands,2013,640
+Worcestershire,West Midlands,2014,640
+Worcestershire,West Midlands,2015,690
+Worcestershire,West Midlands,2016,695
+Worcestershire,West Midlands,2017,765
+Bedford Borough,East of England,2013,245
+Bedford Borough,East of England,2014,270
+Bedford Borough,East of England,2015,255
+Bedford Borough,East of England,2016,260
+Bedford Borough,East of England,2017,265
+Central Bedfordshire,East of England,2013,245
+Central Bedfordshire,East of England,2014,270
+Central Bedfordshire,East of England,2015,275
+Central Bedfordshire,East of England,2016,285
+Central Bedfordshire,East of England,2017,305
+Cambridgeshire,East of England,2013,470
+Cambridgeshire,East of England,2014,500
+Cambridgeshire,East of England,2015,530
+Cambridgeshire,East of England,2016,605
+Cambridgeshire,East of England,2017,690
+Essex,East of England,2013,1255
+Essex,East of England,2014,1135
+Essex,East of England,2015,1025
+Essex,East of England,2016,1005
+Essex,East of England,2017,1010
+Hertfordshire,East of England,2013,1040
+Hertfordshire,East of England,2014,1010
+Hertfordshire,East of England,2015,1005
+Hertfordshire,East of England,2016,1010
+Hertfordshire,East of England,2017,905
+Luton,East of England,2013,385
+Luton,East of England,2014,400
+Luton,East of England,2015,400
+Luton,East of England,2016,380
+Luton,East of England,2017,365
+Norfolk,East of England,2013,1080
+Norfolk,East of England,2014,1150
+Norfolk,East of England,2015,1070
+Norfolk,East of England,2016,1045
+Norfolk,East of England,2017,1105
+Peterborough,East of England,2013,350
+Peterborough,East of England,2014,365
+Peterborough,East of England,2015,340
+Peterborough,East of England,2016,360
+Peterborough,East of England,2017,355
+Southend-on-Sea,East of England,2013,235
+Southend-on-Sea,East of England,2014,245
+Southend-on-Sea,East of England,2015,230
+Southend-on-Sea,East of England,2016,260
+Southend-on-Sea,East of England,2017,280
+Suffolk,East of England,2013,735
+Suffolk,East of England,2014,725
+Suffolk,East of England,2015,730
+Suffolk,East of England,2016,795
+Suffolk,East of England,2017,830
+Thurrock,East of England,2013,260
+Thurrock,East of England,2014,285
+Thurrock,East of England,2015,285
+Thurrock,East of England,2016,335
+Thurrock,East of England,2017,345
+Camden,Inner London,2013,265
+Camden,Inner London,2014,225
+Camden,Inner London,2015,190
+Camden,Inner London,2016,190
+Camden,Inner London,2017,200
+City Of London,Inner London,2013,5
+City Of London,Inner London,2014,5
+City Of London,Inner London,2015,10
+City Of London,Inner London,2016,10
+City Of London,Inner London,2017,10
+Hackney,Inner London,2013,320
+Hackney,Inner London,2014,340
+Hackney,Inner London,2015,340
+Hackney,Inner London,2016,330
+Hackney,Inner London,2017,370
+Hammersmith and Fulham,Inner London,2013,235
+Hammersmith and Fulham,Inner London,2014,205
+Hammersmith and Fulham,Inner London,2015,185
+Hammersmith and Fulham,Inner London,2016,200
+Hammersmith and Fulham,Inner London,2017,215
+Haringey,Inner London,2013,540
+Haringey,Inner London,2014,510
+Haringey,Inner London,2015,455
+Haringey,Inner London,2016,405
+Haringey,Inner London,2017,445
+Islington,Inner London,2013,310
+Islington,Inner London,2014,305
+Islington,Inner London,2015,350
+Islington,Inner London,2016,355
+Islington,Inner London,2017,340
+Kensington and Chelsea,Inner London,2013,100
+Kensington and Chelsea,Inner London,2014,95
+Kensington and Chelsea,Inner London,2015,105
+Kensington and Chelsea,Inner London,2016,105
+Kensington and Chelsea,Inner London,2017,80
+Lambeth,Inner London,2013,500
+Lambeth,Inner London,2014,530
+Lambeth,Inner London,2015,485
+Lambeth,Inner London,2016,460
+Lambeth,Inner London,2017,415
+Lewisham,Inner London,2013,495
+Lewisham,Inner London,2014,505
+Lewisham,Inner London,2015,485
+Lewisham,Inner London,2016,460
+Lewisham,Inner London,2017,455
+Newham,Inner London,2013,410
+Newham,Inner London,2014,405
+Newham,Inner London,2015,430
+Newham,Inner London,2016,350
+Newham,Inner London,2017,395
+Southwark,Inner London,2013,560
+Southwark,Inner London,2014,550
+Southwark,Inner London,2015,500
+Southwark,Inner London,2016,475
+Southwark,Inner London,2017,500
+Tower Hamlets,Inner London,2013,305
+Tower Hamlets,Inner London,2014,325
+Tower Hamlets,Inner London,2015,275
+Tower Hamlets,Inner London,2016,305
+Tower Hamlets,Inner London,2017,335
+Wandsworth,Inner London,2013,210
+Wandsworth,Inner London,2014,205
+Wandsworth,Inner London,2015,225
+Wandsworth,Inner London,2016,250
+Wandsworth,Inner London,2017,290
+Westminster,Inner London,2013,190
+Westminster,Inner London,2014,175
+Westminster,Inner London,2015,180
+Westminster,Inner London,2016,170
+Westminster,Inner London,2017,180
+Barking and Dagenham,Outer London,2013,415
+Barking and Dagenham,Outer London,2014,455
+Barking and Dagenham,Outer London,2015,450
+Barking and Dagenham,Outer London,2016,415
+Barking and Dagenham,Outer London,2017,410
+Barnet,Outer London,2013,305
+Barnet,Outer London,2014,310
+Barnet,Outer London,2015,305
+Barnet,Outer London,2016,315
+Barnet,Outer London,2017,345
+Bexley,Outer London,2013,255
+Bexley,Outer London,2014,260
+Bexley,Outer London,2015,275
+Bexley,Outer London,2016,260
+Bexley,Outer London,2017,240
+Brent,Outer London,2013,345
+Brent,Outer London,2014,350
+Brent,Outer London,2015,325
+Brent,Outer London,2016,335
+Brent,Outer London,2017,320
+Bromley,Outer London,2013,285
+Bromley,Outer London,2014,275
+Bromley,Outer London,2015,265
+Bromley,Outer London,2016,285
+Bromley,Outer London,2017,290
+Croydon,Outer London,2013,730
+Croydon,Outer London,2014,785
+Croydon,Outer London,2015,805
+Croydon,Outer London,2016,805
+Croydon,Outer London,2017,785
+Ealing,Outer London,2013,400
+Ealing,Outer London,2014,385
+Ealing,Outer London,2015,355
+Ealing,Outer London,2016,370
+Ealing,Outer London,2017,345
+Enfield,Outer London,2013,300
+Enfield,Outer London,2014,300
+Enfield,Outer London,2015,355
+Enfield,Outer London,2016,355
+Enfield,Outer London,2017,325
+Greenwich,Outer London,2013,575
+Greenwich,Outer London,2014,540
+Greenwich,Outer London,2015,520
+Greenwich,Outer London,2016,520
+Greenwich,Outer London,2017,495
+Harrow,Outer London,2013,170
+Harrow,Outer London,2014,165
+Harrow,Outer London,2015,165
+Harrow,Outer London,2016,180
+Harrow,Outer London,2017,205
+Havering,Outer London,2013,185
+Havering,Outer London,2014,205
+Havering,Outer London,2015,240
+Havering,Outer London,2016,230
+Havering,Outer London,2017,245
+Hillingdon,Outer London,2013,360
+Hillingdon,Outer London,2014,355
+Hillingdon,Outer London,2015,335
+Hillingdon,Outer London,2016,340
+Hillingdon,Outer London,2017,310
+Hounslow,Outer London,2013,300
+Hounslow,Outer London,2014,315
+Hounslow,Outer London,2015,295
+Hounslow,Outer London,2016,280
+Hounslow,Outer London,2017,250
+Kingston Upon Thames,Outer London,2013,130
+Kingston Upon Thames,Outer London,2014,115
+Kingston Upon Thames,Outer London,2015,115
+Kingston Upon Thames,Outer London,2016,110
+Kingston Upon Thames,Outer London,2017,115
+Merton,Outer London,2013,140
+Merton,Outer London,2014,150
+Merton,Outer London,2015,155
+Merton,Outer London,2016,165
+Merton,Outer London,2017,150
+Redbridge,Outer London,2013,205
+Redbridge,Outer London,2014,215
+Redbridge,Outer London,2015,215
+Redbridge,Outer London,2016,215
+Redbridge,Outer London,2017,230
+Richmond Upon Thames,Outer London,2013,85
+Richmond Upon Thames,Outer London,2014,85
+Richmond Upon Thames,Outer London,2015,95
+Richmond Upon Thames,Outer London,2016,115
+Richmond Upon Thames,Outer London,2017,105
+Sutton,Outer London,2013,170
+Sutton,Outer London,2014,195
+Sutton,Outer London,2015,225
+Sutton,Outer London,2016,230
+Sutton,Outer London,2017,230
+Waltham Forest,Outer London,2013,275
+Waltham Forest,Outer London,2014,265
+Waltham Forest,Outer London,2015,275
+Waltham Forest,Outer London,2016,280
+Waltham Forest,Outer London,2017,280
+Bracknell Forest,South East,2013,105
+Bracknell Forest,South East,2014,115
+Bracknell Forest,South East,2015,105
+Bracknell Forest,South East,2016,100
+Bracknell Forest,South East,2017,115
+Brighton and Hove,South East,2013,445
+Brighton and Hove,South East,2014,460
+Brighton and Hove,South East,2015,470
+Brighton and Hove,South East,2016,440
+Brighton and Hove,South East,2017,455
+Buckinghamshire,South East,2013,400
+Buckinghamshire,South East,2014,440
+Buckinghamshire,South East,2015,435
+Buckinghamshire,South East,2016,460
+Buckinghamshire,South East,2017,455
+East Sussex,South East,2013,595
+East Sussex,South East,2014,575
+East Sussex,South East,2015,545
+East Sussex,South East,2016,545
+East Sussex,South East,2017,560
+Hampshire,South East,2013,1130
+Hampshire,South East,2014,1265
+Hampshire,South East,2015,1335
+Hampshire,South East,2016,1305
+Hampshire,South East,2017,1440
+Isle Of Wight,South East,2013,180
+Isle Of Wight,South East,2014,190
+Isle Of Wight,South East,2015,200
+Isle Of Wight,South East,2016,205
+Isle Of Wight,South East,2017,225
+Kent,South East,2013,1825
+Kent,South East,2014,1820
+Kent,South East,2015,1870
+Kent,South East,2016,2315
+Kent,South East,2017,1900
+Medway Towns,South East,2013,410
+Medway Towns,South East,2014,380
+Medway Towns,South East,2015,425
+Medway Towns,South East,2016,430
+Medway Towns,South East,2017,390
+Milton Keynes,South East,2013,280
+Milton Keynes,South East,2014,305
+Milton Keynes,South East,2015,340
+Milton Keynes,South East,2016,345
+Milton Keynes,South East,2017,395
+Oxfordshire,South East,2013,415
+Oxfordshire,South East,2014,460
+Oxfordshire,South East,2015,510
+Oxfordshire,South East,2016,595
+Oxfordshire,South East,2017,665
+Portsmouth,South East,2013,305
+Portsmouth,South East,2014,320
+Portsmouth,South East,2015,320
+Portsmouth,South East,2016,320
+Portsmouth,South East,2017,360
+Reading,South East,2013,225
+Reading,South East,2014,205
+Reading,South East,2015,210
+Reading,South East,2016,220
+Reading,South East,2017,260
+Slough,South East,2013,185
+Slough,South East,2014,190
+Slough,South East,2015,195
+Slough,South East,2016,180
+Slough,South East,2017,190
+Southampton,South East,2013,485
+Southampton,South East,2014,500
+Southampton,South East,2015,580
+Southampton,South East,2016,590
+Southampton,South East,2017,540
+Surrey,South East,2013,830
+Surrey,South East,2014,795
+Surrey,South East,2015,780
+Surrey,South East,2016,865
+Surrey,South East,2017,870
+West Berkshire,South East,2013,145
+West Berkshire,South East,2014,155
+West Berkshire,South East,2015,170
+West Berkshire,South East,2016,155
+West Berkshire,South East,2017,160
+West Sussex,South East,2013,670
+West Sussex,South East,2014,600
+West Sussex,South East,2015,645
+West Sussex,South East,2016,640
+West Sussex,South East,2017,665
+Windsor and Maidenhead,South East,2013,105
+Windsor and Maidenhead,South East,2014,105
+Windsor and Maidenhead,South East,2015,100
+Windsor and Maidenhead,South East,2016,90
+Windsor and Maidenhead,South East,2017,110
+Wokingham,South East,2013,85
+Wokingham,South East,2014,70
+Wokingham,South East,2015,75
+Wokingham,South East,2016,80
+Wokingham,South East,2017,75
+Bath and North East Somerset,South West,2013,140
+Bath and North East Somerset,South West,2014,150
+Bath and North East Somerset,South West,2015,130
+Bath and North East Somerset,South West,2016,145
+Bath and North East Somerset,South West,2017,160
+Bournemouth,South West,2013,265
+Bournemouth,South West,2014,275
+Bournemouth,South West,2015,260
+Bournemouth,South West,2016,255
+Bournemouth,South West,2017,240
+"Bristol, City of",South West,2013,715
+"Bristol, City of",South West,2014,695
+"Bristol, City of",South West,2015,700
+"Bristol, City of",South West,2016,675
+"Bristol, City of",South West,2017,685
+Cornwall,South West,2013,465
+Cornwall,South West,2014,440
+Cornwall,South West,2015,440
+Cornwall,South West,2016,430
+Cornwall,South West,2017,415
+Devon,South West,2013,695
+Devon,South West,2014,685
+Devon,South West,2015,700
+Devon,South West,2016,710
+Devon,South West,2017,680
+Dorset,South West,2013,350
+Dorset,South West,2014,340
+Dorset,South West,2015,380
+Dorset,South West,2016,475
+Dorset,South West,2017,485
+Gloucestershire,South West,2013,520
+Gloucestershire,South West,2014,480
+Gloucestershire,South West,2015,520
+Gloucestershire,South West,2016,560
+Gloucestershire,South West,2017,610
+Isles Of Scilly,South West,2013,0
+Isles Of Scilly,South West,2014,0
+Isles Of Scilly,South West,2015,0
+Isles Of Scilly,South West,2016,0
+Isles Of Scilly,South West,2017,0
+North Somerset,South West,2013,250
+North Somerset,South West,2014,215
+North Somerset,South West,2015,230
+North Somerset,South West,2016,220
+North Somerset,South West,2017,225
+Plymouth,South West,2013,370
+Plymouth,South West,2014,395
+Plymouth,South West,2015,390
+Plymouth,South West,2016,405
+Plymouth,South West,2017,390
+Poole,South West,2013,145
+Poole,South West,2014,150
+Poole,South West,2015,170
+Poole,South West,2016,180
+Poole,South West,2017,190
+Somerset,South West,2013,515
+Somerset,South West,2014,490
+Somerset,South West,2015,490
+Somerset,South West,2016,500
+Somerset,South West,2017,475
+South Gloucestershire,South West,2013,165
+South Gloucestershire,South West,2014,170
+South Gloucestershire,South West,2015,175
+South Gloucestershire,South West,2016,165
+South Gloucestershire,South West,2017,180
+Swindon,South West,2013,250
+Swindon,South West,2014,255
+Swindon,South West,2015,250
+Swindon,South West,2016,295
+Swindon,South West,2017,325
+Torbay,South West,2013,305
+Torbay,South West,2014,315
+Torbay,South West,2015,305
+Torbay,South West,2016,280
+Torbay,South West,2017,285
+Wiltshire,South West,2013,445
+Wiltshire,South West,2014,395
+Wiltshire,South West,2015,405
+Wiltshire,South West,2016,415
+Wiltshire,South West,2017,440

@@ -84,21 +84,16 @@ p.intro {
 }
 
 .big-number {
-    width: 140px;
-    height: 70px;
-    /*border: 1px solid white;  */
-    padding: 10px 0px 0px 0px;
-    border: 2px solid #e1c057;
-    border-radius: 4px 4px 0 0;
-    margin-top: 10px;
-    background-color: white;
-}
-
-.bn-descriptor {
-    color: black;
+    width: 234px;
+    height: 35px;
+    border-radius: 4px 4px 0px 0px;
+    padding: 6px 0px 0px 0px;
+    background-color: #e1c057;
+    color: white;
     text-align: left;
     font-size: 1.5rem;
     line-height: 1.25;
+    letter-spacing: 1.5px;
     font-weight: 700;
     padding-left: 10px;
 }
@@ -107,19 +102,19 @@ p.bn {
     font-family: 'Shadows Into Light', cursive;
     font-weight: 100;
     font-size: 5rem;
-    color: white;
-    padding: 0 0 0 0;
-    text-align: center;
-    width: 140px;
-    height: 85px;
-    border: 2px solid #e1c057;
-    border-radius: 0 0 4px 4px;
-    background-color: #e1c057;
+    color: black;
+    text-align: left;
+    width: 250px;
+    height: 70px;
+    border-left: 2px solid #e1c057;
+    border-radius: 0px 0px 0px 4px;
+
 }
 
 /* to correct a letterspacing issue */
 span {
-    padding-left: 4px;
+    padding-left: 14px;
+    padding-top: 40px;
 }
 
 .col-lg-2 {

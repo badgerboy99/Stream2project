@@ -39,8 +39,6 @@ function makeGraphs(error, AdoptdataProjects) {
 
 
     var ndx = crossfilter(AdoptdataProjects);
-    //console.log(ndx.size());
-    //var all = ndx.groupAll();
 
     //---dimensions -------------------------------------------
 
@@ -58,6 +56,8 @@ function makeGraphs(error, AdoptdataProjects) {
         return d.number;
     });
 
+    //var totalNumberDim = numberDim.reduceSum(dc.pluck("number"));
+
     var all = ndx.groupAll();
 
     //---groups  -------------------------------------------
@@ -66,40 +66,40 @@ function makeGraphs(error, AdoptdataProjects) {
     var nbyRegion = regionDim.group();
     //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
-    //var nbyNumber2 = numberDim.group();
     //var nbyNumber = regionDim.group().reduceSum(dc.pluck("number")); //with help from crina (but not right?)
     var nbyYear = yearDim.group().reduceSum(dc.pluck("number"));
 
     //---linking to the DOM  -------------------------------------------
 
-    var barchart = dc.barChart("#chart-bar");
+    //var barchart = dc.barChart("#chart-bar");
     //var chart2 = dc.rowChart("#chart-line2"); //change id name later
     //var chart3 = dc.pieChart("#chart-pie"); //change id name later
 
     var totalAdoptionsND = dc.numberDisplay("#total-adoptions-nd");
+    var totalAdoptions = ndx.groupAll().reduceSum(function(d){
+        return d["number"];
+    })
 
 
     //---graphs  -------------------------------------------
 
-        //var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
+    regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
-    barchart
-        .width(300)
+/*    barchart
+        .width(800)
         .height(300)
         .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
             "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
         .margins({top: 10, right: 50, bottom: 40, left: 60})
         .brushOn(false)
-        .dimension(yearDim)
-        .group(nbyYear)
-        //.x(d3.scale.ordinal()).//domain(regions))
-        .x(d3.scale.linear())
-        //.xUnits(dc.units.ordinal())
+        .dimension(regionDim)
+        .group(nbyNumber)
+        .x(d3.scale.ordinal())
         .elasticY(true)
         .xAxisLabel("Region")
-        .yAxisLabel("Total adoptions")
+        .yAxisLabel("Number of adoptions")
         ;
-
+*/
 
 
  /*   var piechart = dc.pieChart("#chart-pie");
@@ -118,8 +118,8 @@ function makeGraphs(error, AdoptdataProjects) {
 
     rowchart2
         .ordinalColors(["#e1c057"])
-        .width(300)
-        .height(400)
+        .width(600)
+        .height(200)
         .dimension(yearDim)
         .group(nbyYear)
         .renderTitle(true)
@@ -141,7 +141,7 @@ function makeGraphs(error, AdoptdataProjects) {
         .xAxis().ticks(4)
         ;
 
-    var linechart = dc.lineChart("#chart-line");
+/*    var linechart = dc.lineChart("#chart-line");
 
     linechart
         .width(500)
@@ -152,10 +152,10 @@ function makeGraphs(error, AdoptdataProjects) {
         .x(d3.scale.ordinal())
         .xAxis().ticks(60)
         ;
-
+*/
     totalAdoptionsND
         .valueAccessor(function (d) { return d })   // yearDim.group().reduceSum(function(d) {return d.number;});
-        .group(all)
+        .group(totalAdoptions)
         .formatNumber(d3.format(","));
 
 dc.renderAll();
