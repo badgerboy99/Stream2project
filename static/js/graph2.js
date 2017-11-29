@@ -63,7 +63,7 @@ function makeGraphs(error, AdoptdataProjects) {
     //---groups  -------------------------------------------
 
     var nbyArea = areaDim.group().reduceSum(function(d) {return d.number;});
-    var nbyRegion = regionDim.group();
+    var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
     //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
     //var nbyNumber = regionDim.group().reduceSum(dc.pluck("number")); //with help from crina (but not right?)
@@ -71,7 +71,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
     //---linking to the DOM  -------------------------------------------
 
-    //var barchart = dc.barChart("#chart-bar");
+    var barchart = dc.barChart("#chart-bar");
     //var chart2 = dc.rowChart("#chart-line2"); //change id name later
     //var chart3 = dc.pieChart("#chart-pie"); //change id name later
 
@@ -85,7 +85,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
     regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
-/*    barchart
+    barchart
         .width(800)
         .height(300)
         .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
@@ -93,13 +93,13 @@ function makeGraphs(error, AdoptdataProjects) {
         .margins({top: 10, right: 50, bottom: 40, left: 60})
         .brushOn(false)
         .dimension(regionDim)
-        .group(nbyNumber)
+        .group(nbyRegion)
         .x(d3.scale.ordinal())
         .elasticY(true)
         .xAxisLabel("Region")
         .yAxisLabel("Number of adoptions")
         ;
-*/
+
 
 
  /*   var piechart = dc.pieChart("#chart-pie");
@@ -122,8 +122,9 @@ function makeGraphs(error, AdoptdataProjects) {
         .height(200)
         .dimension(yearDim)
         .group(nbyYear)
+        .elasticX(true)
         .renderTitle(true)
-        .xAxis().ticks(4)
+        .xAxis().ticks(6)
         ;
 
 
@@ -135,9 +136,10 @@ function makeGraphs(error, AdoptdataProjects) {
             "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
         .width(300)
         .height(400)
-        .dimension(numberDim)
+        .dimension(regionDim)
         .group(nbyRegion)
         .renderTitle(true)
+        .elasticX(true)
         .xAxis().ticks(4)
         ;
 
