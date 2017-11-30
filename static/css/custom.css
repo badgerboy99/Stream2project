@@ -85,11 +85,9 @@ p.intro {
 
 .big-number {
     width: 234px;
-    height: 35px;
-    border-radius: 4px 4px 0px 0px;
+    height: 105px;
     padding: 6px 0px 0px 0px;
-    background-color: #e1c057;
-    color: white;
+    color: #2599BF;
     text-align: left;
     font-size: 1.5rem;
     line-height: 1.25;
@@ -106,14 +104,11 @@ p.bn {
     text-align: left;
     width: 250px;
     height: 70px;
-    border-left: 2px solid #e1c057;
-    border-radius: 0px 0px 0px 4px;
-
 }
 
 /* to correct a letterspacing issue */
 span {
-    padding-left: 14px;
+    padding-left: 0px;
     padding-top: 40px;
 }
 

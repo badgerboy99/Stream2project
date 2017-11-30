@@ -62,7 +62,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
     //---groups  -------------------------------------------
 
-    var nbyArea = areaDim.group().reduceSum(function(d) {return d.number;});
+    var nbyArea = areaDim.group().reduceSum(dc.pluck("number"));
     var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
     //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
@@ -83,18 +83,18 @@ function makeGraphs(error, AdoptdataProjects) {
 
     //---graphs  -------------------------------------------
 
-    regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
+    var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
     barchart
         .width(800)
         .height(300)
-        .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
-            "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
+        .ordinalColors(["#2599BF"])
         .margins({top: 10, right: 50, bottom: 40, left: 60})
         .brushOn(false)
         .dimension(regionDim)
-        .group(nbyRegion)
-        .x(d3.scale.ordinal())
+        .group(nbyNumber)
+        .x(d3.scale.ordinal().domain(regions))
+        .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Region")
         .yAxisLabel("Number of adoptions")
@@ -117,7 +117,7 @@ function makeGraphs(error, AdoptdataProjects) {
     var rowchart2 = dc.rowChart("#chart-row2");
 
     rowchart2
-        .ordinalColors(["#e1c057"])
+        .ordinalColors(["#2599BF"])
         .width(600)
         .height(200)
         .dimension(yearDim)
@@ -132,8 +132,7 @@ function makeGraphs(error, AdoptdataProjects) {
    var rowchart = dc.rowChart("#chart-row");
 
     rowchart
-        .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
-            "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
+        .ordinalColors(["#2599BF"])
         .width(300)
         .height(400)
         .dimension(regionDim)
