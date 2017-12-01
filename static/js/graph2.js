@@ -82,7 +82,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
 
     //---graphs  -------------------------------------------
-
+    var  YorksHumber = "";
     var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
     barchart
@@ -92,13 +92,51 @@ function makeGraphs(error, AdoptdataProjects) {
         .margins({top: 10, right: 50, bottom: 40, left: 60})
         .brushOn(false)
         .dimension(regionDim)
-        .group(nbyNumber)
+        .group(nbyRegion)
         .x(d3.scale.ordinal().domain(regions))
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Region")
         .yAxisLabel("Number of adoptions")
         ;
+
+        barchart.xAxis().tickFormat(function (d) {
+
+            if (d == "Yorkshire and The Humber") {
+                d = "Yorks/Humber"
+                return d
+                }
+
+                else if (d == "East Midlands") {
+                    d = "E. Midlands"
+                    return d
+                }
+
+                else if (d == "West Midlands") {
+                    d = "W. Midlands"
+                    return d
+                }
+
+                else if (d == "East of England") {
+                    d = "E. England"
+                    return d
+                }
+
+                else if (d == "Inner London") {
+                    d = "In. London"
+                    return d
+                }
+
+                else if (d == "Outer London") {
+                    d = "Out. London"
+                    return d
+                }
+
+                else {return d
+            };
+
+        });
+
 
 
 
