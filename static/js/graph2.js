@@ -24,11 +24,11 @@ function makeGraphs(error, AdoptdataProjects) {
     Darlington	North East	2015	200
     Darlington	North East	2016	205
     Darlington	North East	2017	220
-    Durham  	    North East	2013	630
-    Durham  	    North East	2014	605
-    Durham  	    North East	2015	615
-    Durham  	    North East	2016	675
-    Durham  	    North East	2017	815
+    Durham  	North East	2013	630
+    Durham  	North East	2014	605
+    Durham  	North East	2015	615
+    Durham  	North East	2016	675
+    Durham  	North East	2017	815
     Gateshead	North East	2013	390
     Gateshead	North East	2014	355
     Gateshead	North East	2015	335
@@ -56,13 +56,18 @@ function makeGraphs(error, AdoptdataProjects) {
         return d.number;
     });
 
+    //    experiments on selects/dropdowns/filters -----------------------
+
+    var NorthEastDim = regionDim.filter(NorthEast);
+
+
     //var totalNumberDim = numberDim.reduceSum(dc.pluck("number"));
 
     var all = ndx.groupAll();
 
     //---groups  -------------------------------------------
 
-    var nbyArea = areaDim.group().reduceSum(dc.pluck("number"));
+    var nbyArea = areaDim.group();
     var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
     //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
@@ -97,7 +102,7 @@ function makeGraphs(error, AdoptdataProjects) {
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Region")
-        .yAxisLabel("Number of adoptions")
+        .yAxisLabel("Number of adopted children")
         ;
 
         barchart.xAxis().tickFormat(function (d) {
@@ -123,12 +128,12 @@ function makeGraphs(error, AdoptdataProjects) {
                 }
 
                 else if (d == "Inner London") {
-                    d = "In. London"
+                    d = "Inner Lon."
                     return d
                 }
 
                 else if (d == "Outer London") {
-                    d = "Out. London"
+                    d = "Outer Lon"
                     return d
                 }
 
@@ -140,18 +145,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
 
 
- /*   var piechart = dc.pieChart("#chart-pie");
 
-    piechart
-        .ordinalColors(["#77d741", "#36b237", "#c98b40", "#58d3c4",
-            "#D78778", "#9C84F5", "#F57DE8", "#545CF5", "#6DAED7", "#F55359" ])
-        .width(300)
-        .height(400)
-        .innerRadius(60)
-        .dimension(yearDim)
-        .group(nbyYear)
-        ;
-*/
     var rowchart2 = dc.rowChart("#chart-row2");
 
     rowchart2
@@ -180,22 +174,19 @@ function makeGraphs(error, AdoptdataProjects) {
         .xAxis().ticks(4)
         ;
 
-/*    var linechart = dc.lineChart("#chart-line");
-
-    linechart
-        .width(500)
-        .height(200)
-        .dimension(yearDim)
-        .group(nbyNumber)
-        .brushOn(false)
-        .x(d3.scale.ordinal())
-        .xAxis().ticks(60)
-        ;
-*/
     totalAdoptionsND
         .valueAccessor(function (d) { return d })   // yearDim.group().reduceSum(function(d) {return d.number;});
         .group(totalAdoptions)
         .formatNumber(d3.format(","));
+
+    var selectField = dc.selectMenu('#menu-select');
+
+    selectField
+        .dimension(NorthEastDim)
+        .group(nbyArea);
+
+
+
 
 dc.renderAll();
 }
