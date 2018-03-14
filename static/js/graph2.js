@@ -56,30 +56,35 @@ function makeGraphs(error, AdoptdataProjects) {
         return d.number;
     });
 
-    //    experiments on selects/dropdowns/filters -----------------------
-
-    var NorthEastDim = regionDim.filter(NorthEast);
-
-
-    //var totalNumberDim = numberDim.reduceSum(dc.pluck("number"));
-
     var all = ndx.groupAll();
+
+
 
     //---groups  -------------------------------------------
 
-    var nbyArea = areaDim.group();
+    var nbyArea = areaDim.group().reduceSum(dc.pluck("number"));
+    var areaOnly = areaDim.group()
     var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
     //var nbyYear = yearDim.group();
     var nbyNumber = numberDim.group().reduceSum(dc.pluck("number"));
-    //var nbyNumber = regionDim.group().reduceSum(dc.pluck("number")); //with help from crina (but not right?)
     var nbyYear = yearDim.group().reduceSum(dc.pluck("number"));
+
+
+    //---menu-select filters  -------------------------------------------
+
+    let NorthEast = regionDim.filter(region => region === "North East")
+    console.log(NorthEast);
+
+    let NorthWest = regionDim.filter(region => region === "North West")
+    console.log(NorthWest);
 
     //---linking to the DOM  -------------------------------------------
 
+    var selectFieldNE = dc.selectMenu('#menu-select');
+    var selectFieldNW = dc.selectMenu('#menu-select-NW');
     var barchart = dc.barChart("#chart-bar");
-    //var chart2 = dc.rowChart("#chart-line2"); //change id name later
-    //var chart3 = dc.pieChart("#chart-pie"); //change id name later
-
+    var rowchart = dc.rowChart("#chart-row");
+    var rowchart2 = dc.rowChart("#chart-row2");
     var totalAdoptionsND = dc.numberDisplay("#total-adoptions-nd");
     var totalAdoptions = ndx.groupAll().reduceSum(function(d){
         return d["number"];
@@ -133,7 +138,7 @@ function makeGraphs(error, AdoptdataProjects) {
                 }
 
                 else if (d == "Outer London") {
-                    d = "Outer Lon"
+                    d = "Outer Lon."
                     return d
                 }
 
@@ -142,11 +147,6 @@ function makeGraphs(error, AdoptdataProjects) {
 
         });
 
-
-
-
-
-    var rowchart2 = dc.rowChart("#chart-row2");
 
     rowchart2
         .ordinalColors(["#2599BF"])
@@ -158,10 +158,6 @@ function makeGraphs(error, AdoptdataProjects) {
         .renderTitle(true)
         .xAxis().ticks(6)
         ;
-
-
-
-   var rowchart = dc.rowChart("#chart-row");
 
     rowchart
         .ordinalColors(["#2599BF"])
@@ -179,14 +175,13 @@ function makeGraphs(error, AdoptdataProjects) {
         .group(totalAdoptions)
         .formatNumber(d3.format(","));
 
-    var selectField = dc.selectMenu('#menu-select');
+    selectFieldNE
+        .dimension(NorthEast)
+        .group(areaOnly);
 
-    selectField
-        .dimension(NorthEastDim)
-        .group(nbyArea);
-
-
-
+    selectFieldNW
+        .dimension(NorthWest)
+        .group(areaOnly);
 
 dc.renderAll();
-}
+}   // end makeGraphs func
