@@ -14,6 +14,7 @@ p {
 	letter-spacing: 1.5px;
 	color: white;
     text-align: center;
+    line-height: 19px;
 }
 
 a {
@@ -38,37 +39,75 @@ a:hover{
     text-decoration: none;
 }
 
+ #header-box {
+    background-color: #e1c057;
+     width: 100%;
+     height: 179px;
+   }
+
+/*#header-box {*/
+	/*@media(max-width: 574px){*/
+		/*height: 30px;*/
+	/*}*/
+}
+
+/*@media (max-width: 767px) {*/
+     /*#header-box {*/
+      /*background-color: red;*/
+/*}*/
+/*}*/
+
+@media (min-width: @screen-sm-min) {
+    #header-box {
+      background-color: red;
+}
+}
+
+/*@media screen and (min-width: 600px)*/
+/*#header-box {*/
+    /*height:  30px  ;*/
+    /*background-color: red;*/
+/*}*/
+/*}*/
+
 .header {
     margin-left: auto;
     margin-right: auto;
-    margin-top: -160px;
+    margin-top: -170px;
     margin-bottom: 50px;
+    padding: 0px 15px;
     z-index: 10;
 }
 
+
+
 #top {
-    font-size: 2.5rem;
-    margin-bottom: -3px;
-    text-shadow: 1px 1px 20px black;
+    font-size: 1.5rem;
+    /*text-shadow: 1px 1px 20px black;*/
+    line-height: 34px;
+    margin-bottom: -4px;
 }
 
 #mid {
     font-size: 4rem; /*displayed at 48px  */
     letter-spacing: 3px;
     font-weight: 900;
-    text-shadow: 1px 1px 25px black;
+    line-height: 47px;
+    /*text-shadow: 1px 1px 25px black;*/
+    margin-bottom: 2px;
 }
 
 #bottom {
     font-size: 1.75rem;
-    margin-top: -10px;
-    text-shadow: 1px 1px 20px black;
+    /*margin-top: -10px;*/
+    /*text-shadow: 1px 1px 20px black;*/
 }
 
 p.intro {
     color: black;
-    font-size: 1.25rem;
+    font-size: 1.0rem;
     font-weight: 400;
+    line-height: 18px;
 }
 
 .main-head {
@@ -76,8 +115,10 @@ p.intro {
 	font-weight: 400;
     font-size: 2rem;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     letter-spacing: 1.5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .box {
@@ -97,14 +138,17 @@ p.intro {
 .big-number {
     width: 300px;
     height: 105px;
-    padding: 6px 0px 0px 0px;
+    padding: 6px 0px 0px 10px;
+}
+
+.big-number p {
+    color: black;
     color: #2599BF;
     text-align: left;
     font-size: 1.5rem;
     line-height: 1.25;
     letter-spacing: 1.5px;
     font-weight: 700;
-    padding-left: 10px;
 }
 
 p.bn {
@@ -140,15 +184,33 @@ span {
     font-weight: 400;
 }
 
-#menu-select > select {
+.menu-select {
     font-size: 1.25rem;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1.25px;
     font-weight: 400;
+    margin-bottom: 15px;
 }
 
+.menu-select p {
+    color: black;
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+
+}
 
 .timeline-Tweet  u-cf js-tweetIdInfo {
     padding: 20px;
 
 }
+
+/*.dc-chart g.row text {*/
+    /*font-family: 'Raleway', sans-serif;*/
+/*}*/
+
+text.y-axis-label.y-label,text.x-axis-label,.dc-chart g.row text {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+

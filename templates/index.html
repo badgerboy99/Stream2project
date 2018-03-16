@@ -1,9 +1,9 @@
 
 
 <!DOCTYPE html>
-<div>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16">
   <title>Adopted children / England 2013-17</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,800,900" rel="stylesheet">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="{{ url_for ('static',
     filename='lib/css/keen-dashboards.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename="css/reset.css")}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 </head>
 
@@ -21,6 +22,7 @@
     <div>
     <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt='Children playing together in a supportive way'>
     </div>
+    <div id="header-box"></div>
     <div class="header">
         <p id="top">A statistical analysis of</p>
         <p id="mid">ADOPTED CHILDREN</p>
@@ -39,18 +41,10 @@
 {#                • is subject to a care order (to put the child into the care of the local authority)<br>#}
 {#                • is subject to a placement order (to put the child up for adoption)</strong></p><br>#}
 
-             <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority area.</p>
+             <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area.</p>
          </div>
 
-        <!-- menu select -->
-      <div class="col-sm-4">
-{#          <div class="chart-stage">#}
-              <div id="menu-select">North East</div>
-          <div id="menu-select-NW">North West</div>
-{#          </div>#}
-      </div>
 
-      <!-- menu select -->
 
 
 
@@ -66,14 +60,24 @@
              <div class="main-head"> data dashboard
              </div>
 
+      <!-- menu select -->
+        <div class="col-sm-12 row">
+{#          <div class="chart-stage">#}
+            <div class="menu-select col-sm-12  col-md-8" id="NE" name="NNNN"><p col-sm-12  col-md-4>North East</p></div>
+         </div>
+         <div class="col-sm-12 row">
+              <div class="menu-select col-sm-12  col-md-8" id="NW"><p col-sm-12  col-md-4>North West</p></div>
+          </div>
+
+      <!-- menu select -->
 
 
            <div class="big-number">
-               Number of adopted children
-               <div>
+               <p>Number of adopted children</p><div>
                    <p class="bn" id="total-adoptions-nd"></p>
                </div>
             </div>
+
            <div id="chart-row2"></div>
            <!--<div id="chart-row"></div>-->
            <div id="chart-bar"></div>
@@ -83,7 +87,7 @@
 
   <footer>
       <p class="small text-muted"> Data courtesy of <a href="https://www.gov.uk/government/collections/statistics-looked-after-children" target="blank"/>Department for Education</a></p>
-     <p class="small text-muted"> Photo courtesy of Jenn Evelyn-Ann/Unsplash</p>
+      <p class="small text-muted"> Photo courtesy of <a href="https://unsplash.com/photos/UYDoE_AyJQs" target="blank"/>Jenn Evelyn-Ann/Unsplash</p></p>
    </footer>
 
 

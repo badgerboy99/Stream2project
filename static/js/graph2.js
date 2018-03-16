@@ -80,8 +80,8 @@ function makeGraphs(error, AdoptdataProjects) {
 
     //---linking to the DOM  -------------------------------------------
 
-    var selectFieldNE = dc.selectMenu('#menu-select');
-    var selectFieldNW = dc.selectMenu('#menu-select-NW');
+    var selectFieldNE = dc.selectMenu('#NE');
+    var selectFieldNW = dc.selectMenu('#NW');
     var barchart = dc.barChart("#chart-bar");
     var rowchart = dc.rowChart("#chart-row");
     var rowchart2 = dc.rowChart("#chart-row2");
@@ -96,7 +96,7 @@ function makeGraphs(error, AdoptdataProjects) {
     var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
     barchart
-        .width(800)
+        .width(300)
         .height(300)
         .ordinalColors(["#2599BF"])
         .margins({top: 10, right: 50, bottom: 40, left: 60})
@@ -150,7 +150,7 @@ function makeGraphs(error, AdoptdataProjects) {
 
     rowchart2
         .ordinalColors(["#2599BF"])
-        .width(600)
+        .width(300)
         .height(200)
         .dimension(yearDim)
         .group(nbyYear)
