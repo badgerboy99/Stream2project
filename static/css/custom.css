@@ -7,6 +7,13 @@ img {
     z-index: 0;
 }
 
+.container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 66px;
+}
+
 p {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
@@ -41,45 +48,22 @@ a:hover{
 
  #header-box {
     background-color: #e1c057;
-     width: 100%;
-     height: 179px;
+    width: 100%;
+    height: 179px;
+    margin-bottom: 30px;
    }
 
-/*#header-box {*/
-	/*@media(max-width: 574px){*/
-		/*height: 30px;*/
-	/*}*/
-}
-
-/*@media (max-width: 767px) {*/
-     /*#header-box {*/
-      /*background-color: red;*/
-/*}*/
-/*}*/
-
-@media (min-width: @screen-sm-min) {
-    #header-box {
-      background-color: red;
-}
-}
-
-/*@media screen and (min-width: 600px)*/
-/*#header-box {*/
-    /*height:  30px  ;*/
-    /*background-color: red;*/
-/*}*/
-/*}*/
 
 .header {
     margin-left: auto;
     margin-right: auto;
-    margin-top: -170px;
-    margin-bottom: 50px;
-    padding: 0px 15px;
+    margin-top: -199px;
+    /*margin-bottom: 50px;*/
+    padding: 0 15px;
     z-index: 10;
+    /*position: relative;*/
+    /*top: 9px;*/
 }
-
-
 
 #top {
     font-size: 1.5rem;
@@ -108,6 +92,8 @@ p.intro {
     font-size: 1.0rem;
     font-weight: 400;
     line-height: 18px;
+    margin-top: 19px;
+    margin-bottom: 40px;
 }
 
 .main-head {
@@ -117,32 +103,28 @@ p.intro {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1.5px;
-    margin-top: 30px;
     margin-bottom: 15px;
+    padding-left: 15px;
 }
 
-.box {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-#key-findings.box {
-    background-color: rgba(225, 192, 87, 0.50);
-    padding: 20px;
-    height:400px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+/*#key-findings.box {*/
+    /*background-color: rgba(225, 192, 87, 0.50);*/
+    /*padding: 20px;*/
+    /*height:400px;*/
+    /*margin-top: 50px;*/
+    /*margin-bottom: 50px;*/
+/*}*/
 
 .big-number {
-    width: 300px;
-    height: 105px;
-    padding: 6px 0px 0px 10px;
+    width: 250px;
+    /*height: 105px;*/
+    /*padding: 6px 0 0 26px;*/
+    margin-bottom: 40px;
 }
 
 .big-number p {
-    color: black;
+    /*color: black;*/
     color: #2599BF;
     text-align: left;
     font-size: 1.5rem;
@@ -200,9 +182,47 @@ span {
 
 }
 
-.timeline-Tweet  u-cf js-tweetIdInfo {
-    padding: 20px;
+div.dc-chart {
+    margin-bottom: 47px;
+}
 
+/*.timeline-Tweet  u-cf js-tweetIdInfo {*/
+    /*padding: 20px;*/
+/*}*/
+
+#tweet-box {
+    padding: 20px;
+    padding-top: 0;
+}
+
+hr {
+    /*border-width: 1px;*/
+    border: 2px dotted gray;
+    margin-top: 49px;
+    margin: 49px 15px 31px 15px;
+}
+
+p.tweet {
+    color: black;
+    font-size: 1.0rem;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+    letter-spacing: 1.10px;
+    margin-bottom: 20px;
+}
+
+.tweet-logo {
+    width: 150px;
+    margin: 20px 0 15px 0px;
+}
+
+#coram {
+    margin-bottom: 28px;
+}
+
+#chart-row2 {
+    margin-bottom: 40px;
 }
 
 /*.dc-chart g.row text {*/
@@ -214,3 +234,106 @@ text.y-axis-label.y-label,text.x-axis-label,.dc-chart g.row text {
     text-transform: uppercase;
 }
 
+g .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+footer {
+    padding: 20px 0 20px 0;
+}
+
+
+/* ----------- MEDIA QUERIES ------------------------ */
+/* ---------------------------------------------------*/
+/* ----------- MEDIA QUERIES ------------------------ */
+
+
+@media (min-width: 573px) {
+    #header-box {
+        height: 125px;
+    }
+
+    .header {
+        margin-top: -148px;
+    }
+
+    /*p.tweet {*/
+    /*width: 200%;*/
+    /*}*/
+    
+    hr {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #header-box {
+        display: none;
+        /*height: 1px ;*/
+    }
+
+    .header {
+        margin-top: -134px;
+    }
+
+    .box {
+        padding-right: 60px;
+    }
+    #top {
+        font-size: 2.25rem;
+        text-shadow: 1px 1px 20px black;
+    }
+
+    #mid {
+        text-shadow: 1px 1px 25px black;
+        margin: 6px 0;
+    }
+
+    #bottom {
+        text-shadow: 1px 1px 20px black;
+    }
+
+    .main-head {
+        text-align: left;
+    }
+
+    #data-dashboard {
+        text-align: center;
+    }
+
+    #tweet-box {
+        padding: 56px;
+        padding-top: 0;
+    }
+
+    #tweet-left {
+        border-right: 2px dotted gray;
+    }
+
+    .big-number {
+        margin-left: 30px;
+}
+
+}
+
+@media only screen and (min-width: 991px) {
+    /* For desktop: */
+    #tweet-box {
+        padding: 20px;
+        padding-top: 0;
+        border-left: 3px dotted gray;
+    }
+
+    #tweet-left {
+        border-right: 0px dotted gray;
+    }
+
+    hr {
+    /*border-width: 1px;*/
+        border: 2px dotted gray;
+        margin-top: 49px;
+        margin: 49px 15px 31px 15px;
+        display: block;
+    }
+}

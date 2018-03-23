@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16">
+  <link rel="icon" href="{{ url_for ('static', filename="img/icon.jpg")}} type="image/jpg" size="16x16">
   <title>Adopted children / England 2013-17</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
@@ -20,75 +20,84 @@
 
 <body>
     <div>
-    <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt='Children playing together in a supportive way'>
+      <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt="Children playing together in a supportive way">
     </div>
     <div id="header-box"></div>
-    <div class="header">
-        <p id="top">A statistical analysis of</p>
-        <p id="mid">ADOPTED CHILDREN</p>
-        <p id="bottom">in ENGLAND 2013-2017</p>
+      <div class="header">
+          <p id="top">A statistical analysis of</p>
+          <p id="mid">ADOPTED CHILDREN</p>
+          <p id="bottom">in ENGLAND 2013-2017</p>
     </div>
 
 
 
 
-    <div class="container">
 
-        <div class="box">
-{#            <p class="intro">#}
-{#                <strong>Under the <a href="http://www.legislation.gov.uk/ukpga/1989/41/contents" target="_blank">Children Act 1989</a>, a child is legally defined as ‘looked after’ by a local authority if he or she:<br>#}
-{#                • gets accommodation from the local authority for a continuous period of more than 24 hours<br>#}
-{#                • is subject to a care order (to put the child into the care of the local authority)<br>#}
-{#                • is subject to a placement order (to put the child up for adoption)</strong></p><br>#}
+    <div class="container row">
 
+          <section class="box col-xs-12 col-sm-12 col-md-9">
+
+             <div class="main-head" id="data-dashboard"> data dashboard</div>
              <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area.</p>
-         </div>
 
+        <div class="row">
+                <!-- menu select -->
+{#             <div class="col-sm-12 row">#}
+                <div class="menu-select col-sm-4  col-md-4"></div>
+{#             </div>#}
+                <!-- menu select -->
 
-
-
-
-
-
-
-
-
-
-
-        <div class ="row">
-          <div class="box" class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-             <div class="main-head"> data dashboard
-             </div>
-
-      <!-- menu select -->
-        <div class="col-sm-12 row">
-{#          <div class="chart-stage">#}
-            <div class="menu-select col-sm-12  col-md-8" id="NE" name="NNNN"><p col-sm-12  col-md-4>North East</p></div>
-         </div>
-         <div class="col-sm-12 row">
-              <div class="menu-select col-sm-12  col-md-8" id="NW"><p col-sm-12  col-md-4>North West</p></div>
-          </div>
-
-      <!-- menu select -->
-
-
-           <div class="big-number">
-               <p>Number of adopted children</p><div>
+            <div class="big-number col-sm-8 col-md-8" >
+               <p>Number of adopted children</p>
                    <p class="bn" id="total-adoptions-nd"></p>
-               </div>
             </div>
-
-           <div id="chart-row2"></div>
+        </div>
+               <div id="chart-row2"></div>
            <!--<div id="chart-row"></div>-->
-           <div id="chart-bar"></div>
+               <div id="chart-bar"></div>
 
-        </div> <!--end row-->
-     </div> <!--end container-->
+          </section>
 
-  <footer>
-      <p class="small text-muted"> Data courtesy of <a href="https://www.gov.uk/government/collections/statistics-looked-after-children" target="blank"/>Department for Education</a></p>
-      <p class="small text-muted"> Photo courtesy of <a href="https://unsplash.com/photos/UYDoE_AyJQs" target="blank"/>Jenn Evelyn-Ann/Unsplash</p></p>
+
+   <!--Twitter streaming-->
+        <aside id="tweet-box" class="row col-sm-12 col-md-3">
+            <div class="main-head"> twitter updates from UK agencies
+            </div>
+            <div id="tweet-left" class="col-sm-6 col-md-12 col-lg-12">
+                <img class="tweet-logo" src={{ url_for ('static', filename='img/adoptionUK.jpg')}} alt="Adoption UK logo">
+                <p class="tweet">Adoption UK is a national charity run by and for adopters.</p>
+                <a class="twitter-timeline"
+                href="https://twitter.com/AdoptionUK?ref_src=twsrc%5Etfw"
+                data-tweet-limit="1"
+                data-chrome="nofooter">
+                {#  Tweets by AdoptionUK#}
+                </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <hr>
+            <div class="col-sm-6 col-md-12 col-lg-12">
+                <img class="tweet-logo" id="coram" src={{ url_for ('static', filename='img/coram.jpg')}} alt="Coram logo">
+                 <p class="tweet">Coram is committed to improving the lives of the UK’s most vulnerable children and young people.</p>
+                <a class="twitter-timeline"
+                href="https://twitter.com/Coram"
+                data-tweet-limit="1"
+                data-chrome="nofooter">
+                {# Tweets by Coram#}
+
+                </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            </aside> <!--end  Twitter row-->
+      </div> <!--end row-->
+
+
+
+    <footer>
+        <p class="small text-muted"> Data courtesy of <a href="https://www.gov.uk/government/collections/statistics-looked-after-children" target="blank">Department for Education</a></p>
+        <p class="small text-muted"> Photo courtesy of <a href="https://unsplash.com/photos/UYDoE_AyJQs" target="blank">Jenn Evelyn-Ann/Unsplash</a></p>
    </footer>
+
+
 
 
 
