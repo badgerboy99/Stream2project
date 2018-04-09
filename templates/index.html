@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename="css/reset.css")}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/introjs.css')}}" />
 </head>
 
 <body>
@@ -37,24 +38,24 @@
 
           <section class="box col-xs-12 col-sm-12 col-md-9">
 
-             <div class="main-head" id="data-dashboard"> data dashboard</div>
-             <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area.</p>
-
+             <div class="main-head" id="data-dashboard"> data dashboard </div>
+             <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area. </p>
+              <p class="intro">Take the tour to discover how to interact with the statistics<button type="button" autofocus onclick="javascript:introJs().start();">Start Tour</button></p>
             <div class="row">
                  <!-- menu selects -->
 
-                    <div class="menu-select menu-select-thing col-sm-4"><p class="select-title">Select by region</p></div>
+                    <div class="menu-select menu-select-thing col-sm-4" data-step="1" data-intro="Select the English region that you'd like to look at" style="font-weight: normal" data-position="right"><p class="select-title">Select by region</p></div>
 
-                    <div class="area-select menu-select-thing col-sm-4"><p class="select-title">...then select by area</p></div>
+                    <div class="area-select menu-select-thing col-sm-4" data-step="2" data-intro="Now you can access the individual areas within your selected region" style="font-weight: normal" data-position="right"><p class="select-title">Select by area</p></div>
                   <!-- menu selects -->
 
-                <div class="big-number col-sm-8 col-md-8" >
+                <div class="big-number col-sm-8 col-md-8"data-step="3" data-intro="This figure will update with your selected choices" style="font-weight: normal" data-position="right" >
                    <p>Number of adopted children</p>
                        <p class="bn" id="total-adoptions-nd"></p>
                 </div>
             </div>
-               <div id="chart-row2"></div>
-               <div id="chart-bar"></div>
+               <div id="chart-row2" data-step="4" data-intro="Select individual or multiple years" style="font-weight: normal" data-position="right"></div>
+               <div id="chart-bar" data-step="5" data-intro="Select and compare regions" style="font-weight: normal" data-position="right"></div>
 
           </section>
 
@@ -109,6 +110,8 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph2.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/intro.js')}}"></script>
+
 
 </body>
 </html>
