@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="{{ url_for ('static', filename="img/icon.jpg")}} type="image/jpg" size="16x16">
+  <link rel="icon" href="{{ url_for ('static', filename="img/icon.jpg")}}" type="image/jpg" size="16x16">
   <title>Adopted children / England 2013-17</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
@@ -40,20 +40,20 @@
              <div class="main-head" id="data-dashboard"> data dashboard</div>
              <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area.</p>
 
-        <div class="row">
-                <!-- menu select -->
-{#             <div class="col-sm-12 row">#}
-                <div class="menu-select col-sm-4  col-md-4"></div>
-{#             </div>#}
-                <!-- menu select -->
+            <div class="row">
+                 <!-- menu selects -->
 
-            <div class="big-number col-sm-8 col-md-8" >
-               <p>Number of adopted children</p>
-                   <p class="bn" id="total-adoptions-nd"></p>
+                    <div class="menu-select menu-select-thing col-sm-4"><p class="select-title">Select by region</p></div>
+
+                    <div class="area-select menu-select-thing col-sm-4"><p class="select-title">...then select by area</p></div>
+                  <!-- menu selects -->
+
+                <div class="big-number col-sm-8 col-md-8" >
+                   <p>Number of adopted children</p>
+                       <p class="bn" id="total-adoptions-nd"></p>
+                </div>
             </div>
-        </div>
                <div id="chart-row2"></div>
-           <!--<div id="chart-row"></div>-->
                <div id="chart-bar"></div>
 
           </section>
@@ -64,7 +64,7 @@
             <div class="main-head"> twitter updates from UK agencies
             </div>
             <div id="tweet-left" class="col-sm-6 col-md-12 col-lg-12">
-                <img class="tweet-logo" src={{ url_for ('static', filename='img/adoptionUK.jpg')}} alt="Adoption UK logo">
+                <img class="tweet-logo" src={{ url_for ('static', filename='img/AdoptionUK.jpg')}} alt="Adoption UK logo">
                 <p class="tweet">Adoption UK is a national charity run by and for adopters.</p>
                 <a class="twitter-timeline"
                 href="https://twitter.com/AdoptionUK?ref_src=twsrc%5Etfw"

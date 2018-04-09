@@ -61,7 +61,7 @@ var regionChartWidth = $("#chart-bar").width();
     //---groups  -------------------------------------------
 
     var nbyArea = areaDim.group().reduceSum(dc.pluck("number"));
-    // var areaOnly = areaDim.group()
+    var areaOnly = areaDim.group()
     var nbyRegion = regionDim.group().reduceSum(dc.pluck("number"));
     var barnbyRegion = barRegionDim.group().reduceSum(dc.pluck("number"));
     //var nbyYear = yearDim.group();
@@ -80,6 +80,7 @@ var regionChartWidth = $("#chart-bar").width();
     //---linking to the DOM  -------------------------------------------
 
     var selectField = dc.selectMenu('.menu-select');
+    var areaSelectField = dc.selectMenu('.area-select');
     var barchart = dc.barChart("#chart-bar");
     var rowchart2 = dc.rowChart("#chart-row2");
     var totalAdoptionsND = dc.numberDisplay("#total-adoptions-nd");
@@ -89,7 +90,6 @@ var regionChartWidth = $("#chart-bar").width();
 
 
     //---graphs  -------------------------------------------
-    var  YorksHumber = "";
     var regions = ["North East", "North West", "Yorkshire and The Humber", "East Midlands", "West Midlands", "East of England", "Inner London", "Outer London", "South East", "South West"]; //with help from robin z
 
     barchart
@@ -106,7 +106,7 @@ var regionChartWidth = $("#chart-bar").width();
         // .xAxisLabel("Region")
         .yAxisLabel("Number of adopted children")
         ;
-
+        // shortens x axis labels
         barchart.xAxis().tickFormat(function (d) {
 
             if (d == "Yorkshire and The Humber") {
@@ -160,14 +160,25 @@ var regionChartWidth = $("#chart-bar").width();
     totalAdoptionsND
         .valueAccessor(function (d) { return d })   // yearDim.group().reduceSum(function(d) {return d.number;});
         .group(totalAdoptions)
-        .formatNumber(d3.format(","));
+        .formatNumber(d3.format(","))
+        ;
+
 
     selectField
-        .dimension(barRegionDim)
-        .group(barnbyRegion)
+        .dimension(regionDim)
+        .group(nbyRegion)
         .title(function(d) {
             return d.key;
-        });
+        })
+        ;
+
+    areaSelectField
+        .dimension(areaDim)
+        .group(areaOnly)
+        .title(function(d) {
+            return d.key;
+        })
+        ;
 
 
 dc.renderAll();
