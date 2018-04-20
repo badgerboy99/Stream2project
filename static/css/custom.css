@@ -24,19 +24,13 @@ p {
     line-height: 19px;
 }
 
-a {
-    color: #e1c057;
-    text-decoration: none;
-}
+/*a {*/
+    /*!*color: #e1c057;*!*/
+    /*text-decoration: none;*/
+/*}*/
 
 footer a {
     color: #2599BF;
-    text-decoration: none;
-}
-
-a:hover{
-    background-color: #e1c057;
-    color: white;
     text-decoration: none;
 }
 
@@ -122,26 +116,17 @@ button {
     margin-bottom: 15px;
 }
 
-
-/*#key-findings.box {*/
-    /*background-color: rgba(225, 192, 87, 0.50);*/
-    /*padding: 20px;*/
-    /*height:400px;*/
-    /*margin-top: 50px;*/
-    /*margin-bottom: 50px;*/
-/*}*/
-
 .big-number {
     width: 250px;
     /*height: 105px;*/
-    /*padding: 6px 0 0 26px;*/
+    /*padding: 6px 0 0 45px;*/
     margin-bottom: 40px;
 }
 
 .big-number p {
     /*color: black;*/
     color: #2599BF;
-    text-align: left;
+    text-align: center;
     font-size: 1.5rem;
     line-height: 1.25;
     letter-spacing: 1.5px;
@@ -153,8 +138,8 @@ p.bn {
     font-weight: 100;
     font-size: 5rem;
     color: black;
-    text-align: left;
-    width: 250px;
+    text-align: center;
+    /*width: 250px;*/
     height: 70px;
 }
 
@@ -183,22 +168,21 @@ span {
 
 .menu-select-thing {
     font-size: 1.25rem;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1.25px;
     font-weight: 400;
     margin-bottom: 15px;
-    padding-left: 46px;
 }
 
 .menu-select-thing p {
     color: black;
-    text-align: left;
+    text-align: center;
     font-size: 1.25rem;
     margin-bottom: 2px;
 }
 
 .select-title {
-     /*color: black;*/
     color: #2599BF;
     text-align: left;
     font-size: 1.5rem;
@@ -209,12 +193,8 @@ span {
 }
 
 div.dc-chart {
-    margin-bottom: 47px;
+    margin-bottom: 100px;
 }
-
-/*.timeline-Tweet  u-cf js-tweetIdInfo {*/
-    /*padding: 20px;*/
-/*}*/
 
 #tweet-box {
     padding: 20px;
@@ -250,14 +230,15 @@ p.tweet {
     margin-bottom: 40px;
 }
 
-/*.dc-chart g.row text {*/
-    /*font-family: 'Raleway', sans-serif;*/
-/*}*/
-
 text.y-axis-label.y-label,text.x-axis-label,.dc-chart g.row text {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
+
+#row-chart-x-label {
+    color: red;
+}
+
 
 g .x.axis text {
     text-anchor: end !important;
@@ -273,7 +254,15 @@ footer {
     position: unset;
 }
 
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
 
+.dc-select-menu {
+    width: 210px;
+}
 
 /* ----------- MEDIA QUERIES ------------------------ */
 /* ---------------------------------------------------*/
@@ -289,13 +278,6 @@ footer {
         margin-top: -148px;
     }
 
-    /*p.tweet {*/
-    /*width: 200%;*/
-    /*}*/
-    
-    /*hr {*/
-        /*display: none;*/
-    /*}*/
 }
 
 @media (min-width: 768px) {
@@ -344,12 +326,12 @@ footer {
 
 
     hr {
-        /*border-top: 4px double gray;*/
-        /*margin-top: 49px;*/
-        /*margin: 49px 15px 31px 15px;*/
         display: none;
     }
 
+    .dc-select-menu {
+    width: 190px;
+    }
 }
 
 @media only screen and (min-width: 991px) {
@@ -365,9 +347,6 @@ footer {
     }
 
     hr {
-        /*border-top: 4px double gray;*/
-        /*margin-top: 49px;*/
-        /*margin: 49px 15px 31px 15px;*/
         display: block;
     }
 
@@ -376,4 +355,7 @@ footer {
         padding-left: 15px;
     }
 
+    /*.dc-select-menu {*/
+    /*width: 260px;*/
+    /*}*/
 }

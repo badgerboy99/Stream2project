@@ -182,6 +182,23 @@ var regionChartWidth = $("#chart-bar").width();
 
 
 dc.renderAll();
+
+    //this is to add an x axis label to my row chart. However I wasn't able to fine tune its' position so I've left it out for now.
+    // with grateful thanks to DJ Martin
+    // https://stackoverflow.com/questions/21114336/how-to-add-axis-labels-for-row-chart-using-dc-js-or-d3-js
+        // function AddXAxis(chartToUpdate, displayText) {
+        //     chartToUpdate.svg()
+        //         .append("text")
+        //         .attr("class", "x-axis-label")
+        //         .attr("id", "row-chart-x-label")
+        //         .attr("text-anchor", "middle")
+        //         .attr("x", chartToUpdate.width() / 2)
+        //         .attr("y", chartToUpdate.height())
+        //         .text(displayText);
+        // }
+        // AddXAxis(rowchart2, "Number of Adopted children");
+
+
 }   // end makeGraphs func
 
 

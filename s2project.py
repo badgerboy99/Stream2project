@@ -2,19 +2,20 @@ from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
 import json
-import os
+# import os
 
 app = Flask(__name__)
 
 # when hosting via local server
-# MONGODB_HOST = 'localhost'
-# MONGODB_PORT = 27017
-# DBS_NAME = 'Adoptdata'
+MONGODB_HOST = 'localhost'
+MONGODB_PORT = 27017
+DBS_NAME = 'Adoptdata'
+COLLECTION_NAME = 'projects'
 
 # when hosting via heroku
-MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'Adoptdata')
-COLLECTION_NAME = 'adoptionData'
+# MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
+# DBS_NAME = os.getenv('MONGO_DB_NAME', 'Adoptdata')
+# COLLECTION_NAME = 'adoptionData'
 
 
 @app.route("/")
@@ -40,7 +41,12 @@ def Adoptdata():
 
     # Open a connection to MongoDB using a with statement such that the
     # connection will be closed as soon as we exit the with statement
-    with MongoClient(MONGO_URI) as conn:
+
+    # for Heroku
+    # with MongoClient(MONGO_URI) as conn:
+
+    # for local host
+    with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS

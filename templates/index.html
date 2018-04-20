@@ -46,16 +46,16 @@
 
                     <div class="menu-select menu-select-thing col-sm-4" data-step="1" data-intro="Select the English region that you'd like to look at" style="font-weight: normal" data-position="right"><p class="select-title">Select by region</p></div>
 
-                    <div class="area-select menu-select-thing col-sm-4" data-step="2" data-intro="Now you can access the individual areas within your selected region" style="font-weight: normal" data-position="right"><p class="select-title">Select by area</p></div>
+                    <div class="area-select menu-select-thing col-sm-4" data-step="2" data-intro="Select the area you'd like to look at, either within the region you've already selected, or as a full-list alphabetically" style="font-weight: normal" data-position="right"><p class="select-title">Select by area</p></div>
                   <!-- menu selects -->
 
-                <div class="big-number col-sm-8 col-md-8"data-step="3" data-intro="This figure will update with your selected choices" style="font-weight: normal" data-position="right" >
+                <div class="big-number col-sm-8 col-md-8"data-step="3" data-intro="This figure will update relative to your selections" style="font-weight: normal" data-position="right" >
                    <p>Number of adopted children</p>
                        <p class="bn" id="total-adoptions-nd"></p>
                 </div>
             </div>
-               <div id="chart-row2" data-step="4" data-intro="Select individual or multiple years" style="font-weight: normal" data-position="right"></div>
-               <div id="chart-bar" data-step="5" data-intro="Select and compare regions" style="font-weight: normal" data-position="right"></div>
+               <div id="chart-row2" data-step="4" data-intro="Select individual or multiple years by clicking/tapping on the rows" style="font-weight: normal" data-position="right"></div>
+               <div id="chart-bar" data-step="5" data-intro="Select and compare regions by clicking/tapping on the bars" style="font-weight: normal" data-position="right"></div>
 
           </section>
 
@@ -65,19 +65,19 @@
             <div class="main-head"> twitter updates from UK agencies
             </div>
             <div id="tweet-left" class="col-sm-6 col-md-12 col-lg-12">
-                <img class="tweet-logo" src={{ url_for ('static', filename='img/AdoptionUK.jpg')}} alt="Adoption UK logo">
+                <a href="https://www.adoptionuk.org/" target="blank"><img class="tweet-logo" src={{ url_for ('static', filename='img/AdoptionUK.jpg')}} alt="Adoption UK logo"></a>
                 <p class="tweet">Adoption UK is a national charity run by and for adopters.</p>
                 <a class="twitter-timeline"
                 href="https://twitter.com/AdoptionUK?ref_src=twsrc%5Etfw"
                 data-tweet-limit="1"
                 data-chrome="nofooter">
-                {#  Tweets by AdoptionUK#}
+                  Tweets by AdoptionUK
                 </a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <hr>
             <div class="col-sm-6 col-md-12 col-lg-12">
-                <img class="tweet-logo" id="coram" src={{ url_for ('static', filename='img/coram.jpg')}} alt="Coram logo">
+                <a href="http://www.coram.org.uk/" target="blank"><img class="tweet-logo" id="coram" src={{ url_for ('static', filename='img/coram.jpg')}} alt="Coram logo"></a>
                  <p class="tweet">Coram is committed to improving the lives of the UK’s most vulnerable children and young people.</p>
                 <a class="twitter-timeline"
                 href="https://twitter.com/Coram"
@@ -88,7 +88,7 @@
                 </a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            </aside> <!--end  Twitter row-->
+        </aside> <!--end  Twitter row-->
       </div> <!--end row-->
 
 
