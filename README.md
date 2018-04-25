@@ -6,7 +6,7 @@ This site features an interactive dashboard enabling users to filter data by reg
 
 This project forms my 'Stream 2' back-end project on my Code Institute Full Stack Web Development course.
 
-It is deployed on Heroku at (https://shrouded-savannah-58227.herokuapp.com/)
+It is deployed on Heroku [here](https://shrouded-savannah-58227.herokuapp.com/)
 
 I chose to use data relating to adoptions in England as the topic is one that means a lot to me (as an adoptive father). I have also included a Twitter timeline from two of the UK's highest profile organisations that support adoption (Adoption UK and Coram), mainly to give the site some life beyond a fairly dry statistical analysis.
 
