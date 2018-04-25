@@ -6,12 +6,12 @@ This site features an interactive dashboard enabling users to filter data by reg
 
 This project forms my 'Stream 2' back-end project on my Code Institute Full Stack Web Development course.
 
-It is deployed on Heroku at ////
+It is deployed on Heroku at (https://shrouded-savannah-58227.herokuapp.com/)
 
 I chose to use data relating to adoptions in England as the topic is one that means a lot to me (as an adoptive father). I have also included a Twitter timeline from two of the UK's highest profile organisations that support adoption (Adoption UK and Coram), mainly to give the site some life beyond a fairly dry statistical analysis.
 
 
-The data has been compiled manually from several databases published by [gov.co.uk](https://www.gov.uk/government/collections/statistics-looked-after-children) and converted to a CSV // check // file. This was subsequently uploaded to MongoDB. // check //
+The data has been compiled manually from several databases published by [gov.co.uk](https://www.gov.uk/government/collections/statistics-looked-after-children) and converted to a CSV file. This was subsequently uploaded to MongoDB.
 
 
 ## Note
@@ -33,10 +33,11 @@ The following libraries are utilised:
 - [Bootstrap](http://getbootstrap.com/)
     - I have used Bootstrap to give this project a simple, responsive layout
 - [D3.js](https://d3js.org/) 
-	- D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented SVG
+	- A JavaScript based visualization engine, which will render interactive charts and graphs based on the data.
 - DC.js
-	- A charting library built on top of D3.js 
+	- A charting library built on top of D3.js, which makes plotting the charts a lot easier.
 - Crossfilter 
 	- A JavaScript library for slicing and dicing row-based data – it allows the graphs to be interactive
-- Queue.js 
+- Queue.js
+    - An asynchronous helper library for JavaScript.
 - Keen.js
