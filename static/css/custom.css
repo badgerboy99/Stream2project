@@ -5,6 +5,12 @@ html {
 img {
     width: 100%;
     z-index: 0;
+    object-fit: cover;
+
+}
+
+#coverpic {
+    height: 49vh;
 }
 
 .container {
@@ -23,11 +29,6 @@ p {
     text-align: center;
     line-height: 19px;
 }
-
-/*a {*/
-    /*!*color: #e1c057;*!*/
-    /*text-decoration: none;*/
-/*}*/
 
 footer a {
     color: #2599BF;
@@ -52,16 +53,12 @@ footer a {
     margin-left: auto;
     margin-right: auto;
     margin-top: -199px;
-    /*margin-bottom: 50px;*/
     padding: 0 15px;
     z-index: 10;
-    /*position: relative;*/
-    /*top: 9px;*/
 }
 
 #top {
     font-size: 1.5rem;
-    /*text-shadow: 1px 1px 20px black;*/
     line-height: 34px;
     margin-bottom: -4px;
 }
@@ -71,14 +68,11 @@ footer a {
     letter-spacing: 3px;
     font-weight: 900;
     line-height: 47px;
-    /*text-shadow: 1px 1px 25px black;*/
     margin-bottom: 2px;
 }
 
 #bottom {
     font-size: 1.75rem;
-    /*margin-top: -10px;*/
-    /*text-shadow: 1px 1px 20px black;*/
 }
 
 p.intro {
@@ -101,7 +95,6 @@ button {
     letter-spacing: 1.25px;
     margin-bottom: 15px;
     height: 25px;
-    /*background-color: #e1c057;*/
     border: 1px solid #e1c057;
     margin-left: 10px;
 }
@@ -116,15 +109,16 @@ button {
     margin-bottom: 15px;
 }
 
+#selects-big-no {
+    display: flex;
+}
+
 .big-number {
     width: 250px;
-    /*height: 105px;*/
-    /*padding: 6px 0 0 45px;*/
     margin-bottom: 40px;
 }
 
 .big-number p {
-    /*color: black;*/
     color: #2599BF;
     text-align: center;
     font-size: 1.5rem;
@@ -139,7 +133,6 @@ p.bn {
     font-size: 5rem;
     color: black;
     text-align: center;
-    /*width: 250px;*/
     height: 70px;
 }
 
@@ -255,7 +248,7 @@ footer {
 }
 
 .row {
-   display: flex;
+   /*display: flex;*/
    flex-wrap: wrap;
    justify-content: center;
 }
@@ -283,7 +276,6 @@ footer {
 @media (min-width: 768px) {
     #header-box {
         display: none;
-        /*height: 1px ;*/
     }
 
     .header {
@@ -312,7 +304,7 @@ footer {
     }
 
     #tweet-box {
-        padding: 56px;
+        /*padding: 56px;*/
         padding-top: 0;
     }
 
@@ -323,7 +315,6 @@ footer {
     .big-number {
         margin-left: 30px;
     }
-
 
     hr {
         display: none;
@@ -337,25 +328,24 @@ footer {
 @media only screen and (min-width: 991px) {
     /* For desktop: */
     #tweet-box {
-        padding: 20px;
+        /*padding: 20px;*/
         padding-top: 0;
         border-left: 4px double gray;
     }
 
     #tweet-left {
         border-right: 0px dotted gray;
+        margin-bottom: 28px;
+        border-bottom: 4px double gray;
+        /*padding-bottom: 32px;*/
     }
 
     hr {
-        display: block;
+        /*display: block;*/
     }
 
     .main-head {
         text-align: left;
         padding-left: 15px;
     }
-
-    /*.dc-select-menu {*/
-    /*width: 260px;*/
-    /*}*/
 }

@@ -21,7 +21,7 @@
 
 <body>
     <div>
-      <img src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt="Children playing together in a supportive way">
+      <img id="coverpic" src={{ url_for ('static', filename='img/PhotobyJennEvelyn-AnnonUnsplash.jpg')}} alt="Children playing together in a supportive way">
     </div>
     <div id="header-box"></div>
       <div class="header">
@@ -41,7 +41,7 @@
              <div class="main-head" id="data-dashboard"> data dashboard </div>
              <p class="intro"> This data covers the period from 1 April 2013 to 31 March 2017 in England. It records details of every child who has been placed with an adoptive family in each local authority region and area. </p>
               <p class="intro">Take the tour to discover how to interact with the statistics<button type="button" autofocus onclick="javascript:introJs().start();">Start Tour</button></p>
-            <div class="row">
+            <div class="row" id="selects-big-no">
                  <!-- menu selects -->
 
                     <div class="menu-select menu-select-thing col-sm-4" data-step="1" data-intro="Select the English region that you'd like to look at" style="font-weight: normal" data-position="right"><p class="select-title">Select by region</p></div>
@@ -62,7 +62,7 @@
 
    <!--Twitter streaming-->
         <aside id="tweet-box" class="row col-sm-12 col-md-3">
-            <div class="main-head"> twitter updates from UK agencies
+            <div class="main-head">twitter updates from UK agencies
             </div>
             <div id="tweet-left" class="col-sm-6 col-md-12 col-lg-12">
                 <a href="https://www.adoptionuk.org/" target="blank"><img class="tweet-logo" src={{ url_for ('static', filename='img/AdoptionUK.jpg')}} alt="Adoption UK logo"></a>

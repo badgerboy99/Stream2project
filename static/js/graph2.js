@@ -69,13 +69,6 @@ var regionChartWidth = $("#chart-bar").width();
     var nbyYear = yearDim.group().reduceSum(dc.pluck("number"));
 
 
-    //---menu-select filters  -------------------------------------------
-
-    // let NorthEast = regionDim.filter(region => region === "North East")
-    // console.log(NorthEast);
-    //
-    // let NorthWest = regionDim.filter(region => region === "North West")
-    // console.log(NorthWest);
 
     //---linking to the DOM  -------------------------------------------
 
